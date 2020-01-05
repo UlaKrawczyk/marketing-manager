@@ -1,0 +1,61 @@
+.grid-container {
+  display: grid;
+  grid-template-columns:
+    [left-start] minmax(6rem, 1fr) [left-end center-start]
+    repeat(6, [col-start] minmax(min-content, 19.5rem) [col-end])
+    [center-end right-start] minmax(6rem, 1fr) [right-end];
+
+  grid-template-rows: 80vh repeat(10, min-content);
+}
+
+.header {
+  grid-column: left-start / right-end;
+  background-image: url(../assets/img/header-foto-medium.jpg);
+  background-size: cover;
+  background-position: top center;
+}
+
+.main {
+  grid-column: center-start / center-end;
+  background-color: limegreen;
+}
+
+.skills-slide {
+  grid-column: left-start / right-end;
+  background-color: pink;
+}
+
+.experience {
+  grid-column: center-start / center-end;
+  background-color: limegreen;
+}
+
+.education {
+  grid-column: center-start / center-end;
+  background-color: yellow;
+}
+
+.projects {
+  grid-column: center-start / center-end;
+  background-color: limegreen;
+}
+
+.hobbies {
+  grid-column: center-start / center-end;
+  background-color: yellow;
+}
+
+.hobbies-skills {
+  grid-column: left-start / right-end;
+  background-color: pink;
+}
+
+.contact {
+  grid-column: center-start / center-end;
+  background-color: limegreen;
+}
+
+.footer {
+  grid-column: left-start / right-end;
+  background-color: pink;
+}
