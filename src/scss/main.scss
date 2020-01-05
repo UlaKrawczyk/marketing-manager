@@ -1,9 +1,15 @@
 @import "base/animation";
 @import "base/base";
+@import "base/mixins";
 @import "base/normalize";
-@import "base/layout";
+@import "base/typography";
+@import "base/utilities";
 
-@import "components/dropdown-menu";
+@import "components/buttons";
+@import "components/footer";
 @import "components/header";
-@import "components/hotel-view";
-@import "components/sidebar";
+@import "components/popup";
+
+@import "page-layout/about";
+@import "page-layout/layout";
+@import "page-layout/navigation";
