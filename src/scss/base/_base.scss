@@ -4,13 +4,18 @@
   --color-grey-dark: #444655;
   --color-grey-light: #f4f4f4;
 
-  --font-primary: "Roboto", sans-serif;
-  --font-headings: "Sue Ellen Francisco", cursive;
+  --font-primary: "Raleway", sans-serif;
+  --font-headings: "Shadows Into Light Two", cursive;
   --font-Grymulka: "Give You Glory", cursive;
 
-  --shadow-box-big: 0 2rem 3rem rgba(var(--color-grey-dark), 0.38);
-  --shadow-box-round: 0 0 3rem rgba(var(--color-grey-dark), 0.45);
-  --shadow-icon: 0 0.5rem 0.5rem rgba(var(--color-grey-dark), 0.6);
+  font-family: "Kaushan Script", cursive;
+  font-family: "Amatic SC", cursive;
+  font-family: "Kalam", cursive;
+  font-family: "Shadows Into Light Two", cursive;
+
+  --shadow-box-big: 0 2rem 3rem rgba(68, 70, 85, 0.38);
+  --shadow-box-round: 0 0 3rem rgba(68, 70, 85, 0.45);
+  --shadow-icon: 0 0.5rem 0.5rem rgba(68, 70, 85, 0.6);
 
   --line: 1px solid var(--color-primary);
 }
@@ -51,6 +56,7 @@ body {
   box-sizing: border-box;
 
   font-family: var(--font-primary);
+  font-size: 1.6rem;
   font-weight: 400;
   line-height: 1.6;
   color: var(--color-grey-dark);

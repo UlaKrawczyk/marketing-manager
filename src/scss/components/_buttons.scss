@@ -1,0 +1,37 @@
+.button-square {
+  align-self: flex-end;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  &__shape,
+  &__shape:link,
+  &__shape:visited {
+    display: inline-block;
+    width: 4.5rem;
+    height: 4.5rem;
+    border: var(--line);
+    background-color: var(--color-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1.2rem;
+    transition: 0.5s;
+    cursor: pointer;
+  }
+
+  &__shape:hover &__arrow {
+    animation: pulsate 1.5s ease-in-out infinite;
+  }
+
+  &__arrow {
+    fill: white;
+    width: 2rem;
+  }
+
+  &__text {
+    text-transform: uppercase;
+    font-family: var(--font-headings);
+  }
+}
