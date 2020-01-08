@@ -1,0 +1,18 @@
+.about-background {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  &__grey {
+    grid-column: 2 / 3;
+    background-color: var(--color-grey-light);
+    margin-left: 5rem;
+  }
+}
+
+.about-container {
+  background-color: pink;
+  &__content {
+  }
+  &__photo {
+  }
+}

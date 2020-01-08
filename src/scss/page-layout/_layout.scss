@@ -22,15 +22,22 @@
   }
 }
 
-.main {
-  grid-column: center-start / center-end;
+.about-background {
+  grid-column: left-start / right-end;
+  grid-row: 4 / 5;
   min-height: 20vh;
-  margin-top: 3rem;
+  margin-top: 6rem;
+  background-color: lightgreen;
+}
+.about-container {
+  grid-column: center-start / center-end;
+  grid-row: 4 / 5;
+  margin-top: 6rem;
 }
 
 .skills-slide {
   grid-column: left-start / right-end;
-  background-color: pink;
+  background-color: blue;
 }
 
 .experience {
