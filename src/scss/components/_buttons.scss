@@ -1,9 +1,11 @@
 .button-square {
-  align-self: flex-end;
-
   display: flex;
   justify-content: flex-start;
   align-items: center;
+
+  &__header {
+    align-self: flex-end;
+  }
 
   &__shape,
   &__shape:link,
@@ -33,5 +35,52 @@
   &__text {
     text-transform: uppercase;
     font-family: var(--font-headings);
+  }
+}
+
+.button-rectangle {
+  position: relative;
+  width: 19rem;
+  height: 4.5rem;
+  margin-top: 2rem;
+  background-color: var(--color-primary);
+  color: #fff;
+  font-family: var(--font-headings);
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  border: var(--line);
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.5s;
+
+  .span-bg {
+    width: 110%;
+    height: 110%;
+    position: absolute;
+    //top: calc(100% + 1px);
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    transition: 0.5s;
+  }
+  .span-text {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+  }
+
+  &:hover {
+    color: var(--color-grey-dark);
+    border-color: var(--color-grey-dark);
+  }
+  &:hover .span-bg {
+    transform: translateY(-100%);
+  }
+
+  &:focus {
+    outline: none;
   }
 }

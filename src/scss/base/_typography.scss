@@ -1,2 +1,21 @@
-.paragraph {
+.text {
+  &__about {
+    margin-bottom: 2.5rem;
+    margin-right: 6rem;
+  }
+  &__blue {
+    color: var(--color-secondary);
+  }
+}
+
+.heading__secondary {
+  margin-bottom: 3rem;
+  font-family: var(--font-headings);
+  font-size: 3.8rem;
+  text-transform: uppercase;
+
+  &--span {
+    letter-spacing: 1px;
+    font-size: 4.2rem;
+  }
 }

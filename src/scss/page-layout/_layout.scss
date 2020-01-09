@@ -5,7 +5,7 @@
     repeat(6, [col-start] minmax(min-content, 19.5rem) [col-end])
     [center-end right-start] minmax(6rem, 1fr) [right-end];
 
-  grid-template-rows: 17vh minmax(58vh, min-content) minmax(11vh, min-content) repeat(10, min-content);
+  grid-template-rows: 16vh minmax(52vh, min-content) minmax(10vh, min-content) repeat(10, min-content);
 }
 
 .header {
@@ -18,21 +18,19 @@
   &__background {
     grid-column: left-start / right-end;
     grid-row: 3 / 4;
-    background-color: lightblue;
   }
 }
 
 .about-background {
   grid-column: left-start / right-end;
   grid-row: 4 / 5;
-  min-height: 20vh;
-  margin-top: 6rem;
-  background-color: lightgreen;
+  margin-top: -12rem;
+  z-index: -1;
 }
 .about-container {
   grid-column: center-start / center-end;
   grid-row: 4 / 5;
-  margin-top: 6rem;
+  margin: 10rem 0;
 }
 
 .skills-slide {
