@@ -1,0 +1,33 @@
+.slide {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-row-gap: 2rem;
+  justify-items: center;
+  margin: 5rem 0;
+
+  &__icon {
+    fill: var(--color-grey-light);
+    width: 12rem;
+    filter: drop-shadow(var(--shadow-icon));
+
+    &--sphere {
+      width: 12.5rem;
+    }
+    &--computer {
+      width: 15rem;
+    }
+  }
+
+  &__text {
+    text-align: center;
+    z-index: 5;
+  }
+
+  &__skill {
+    font-size: 2.5rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--color-grey-light);
+    text-shadow: var(--shadow-icon);
+  }
+}
