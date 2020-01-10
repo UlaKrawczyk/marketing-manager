@@ -6,10 +6,16 @@
   &__blue {
     color: var(--color-secondary);
   }
+
+  &__skills {
+    text-align: right;
+    margin-left: 6rem;
+    margin-bottom: 1.4rem;
+  }
 }
 
 .heading__secondary {
-  margin-bottom: 3rem;
+  margin-bottom: 2.6rem;
   font-family: var(--font-headings);
   font-size: 3.8rem;
   text-transform: uppercase;
@@ -17,5 +23,9 @@
   &--span {
     letter-spacing: 1px;
     font-size: 4.2rem;
+  }
+
+  &--right {
+    text-align: right;
   }
 }
