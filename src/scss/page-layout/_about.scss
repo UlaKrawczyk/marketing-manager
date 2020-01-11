@@ -13,6 +13,12 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
   &__photo-wrapper {
     padding: 3rem;
     background: #fff;

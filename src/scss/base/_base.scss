@@ -1,7 +1,7 @@
 :root {
   --color-primary: #d1a46f;
   --color-secondary: #112b9e;
-  --color-grey-dark: #444655;
+  --color-grey-dark: rgb(68, 70, 85);
   --color-grey-light: #f4f4f4;
 
   --font-primary: "Raleway", sans-serif;
@@ -9,8 +9,10 @@
   --font-Grymulka: "Give You Glory", cursive;
 
   --shadow-box-big: 0 2rem 3rem rgba(68, 70, 85, 0.38);
-  --shadow-box-round: 0 0 3rem rgba(68, 70, 85, 0.45);
+  --shadow-box-round: 0 0 3rem rgba(68, 70, 85, 0.35);
   --shadow-icon: 0 0.7rem 0.5rem rgba(68, 70, 85, 0.9);
+  --shadow-button: 0 1rem 2rem rgba(68, 70, 85, 0.15);
+  --shadow-button-active: 0 0.5rem 1rem rgba(68, 70, 85, 0.15);
 
   --line: 1px solid var(--color-primary);
 }

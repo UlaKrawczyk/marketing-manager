@@ -1,6 +1,6 @@
 .text {
   &__about {
-    margin-bottom: 2.5rem;
+    margin-bottom: 1.5rem;
     margin-right: 6rem;
   }
   &__blue {
@@ -15,10 +15,11 @@
 }
 
 .heading__secondary {
-  margin-bottom: 2.6rem;
+  margin-bottom: 2rem;
   font-family: var(--font-headings);
   font-size: 3.8rem;
   text-transform: uppercase;
+  font-weight: 400;
 
   &--span {
     letter-spacing: 1px;
@@ -27,5 +28,22 @@
 
   &--right {
     text-align: right;
+  }
+}
+
+.heading__tertiary {
+  margin-bottom: 5rem;
+  font-size: 1.8rem;
+  text-align: right;
+  font-weight: 400;
+}
+
+.heading__quaternary {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+
+  &--uppercase {
+    text-transform: uppercase;
   }
 }

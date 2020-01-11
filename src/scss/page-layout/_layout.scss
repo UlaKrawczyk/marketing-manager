@@ -60,14 +60,20 @@
   grid-row: 6 / 7;
 }
 
-.experience {
+.experience-background {
+  grid-column: left-start / right-end;
+  grid-row: 7 / 8;
+  background-color: var(--color-grey-light);
+}
+.experience-container {
   grid-column: center-start / center-end;
-  background-color: limegreen;
+  grid-row: 7 / 8;
+  margin: 10rem 0;
 }
 
 .education {
   grid-column: center-start / center-end;
-  min-height: 40vh;
+  min-height: 10vh;
   background-color: yellow;
 }
 
