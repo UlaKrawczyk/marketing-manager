@@ -3,13 +3,14 @@
     grid-column: 1 / -1;
 
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 4rem;
-    margin: 0 2.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-column-gap: 6rem;
+    grid-row-gap: 6rem;
+    margin: 0 3rem;
   }
 
   &__card {
-    padding: 3rem;
+    padding: 3rem 2rem;
     box-shadow: var(--shadow-box-round);
     text-align: center;
 
@@ -23,13 +24,15 @@
 
     &--ue {
       width: 75%;
+      margin-top: 5.5em;
     }
     &--agh {
       width: 40%;
-      margin-top: 1rem;
+      margin-top: 1.5rem;
     }
     &--zsg {
       width: 50%;
+      margin-top: 5.5rem;
     }
   }
 }

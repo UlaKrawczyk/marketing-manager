@@ -77,11 +77,12 @@
 
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 2rem;
 }
 
 .projects {
   grid-column: center-start / center-end;
-  background-color: limegreen;
+  margin-bottom: 10rem;
 }
 
 .hobbies {
