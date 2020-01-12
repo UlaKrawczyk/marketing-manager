@@ -73,8 +73,10 @@
 
 .education {
   grid-column: center-start / center-end;
-  min-height: 10vh;
-  background-color: yellow;
+  margin: 10rem 0;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .projects {

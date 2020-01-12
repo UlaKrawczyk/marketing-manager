@@ -1,0 +1,35 @@
+.edu {
+  &__cards {
+    grid-column: 1 / -1;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 4rem;
+    margin: 0 2.5rem;
+  }
+
+  &__card {
+    padding: 3rem;
+    box-shadow: var(--shadow-box-round);
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__img {
+    justify-self: flex-end;
+
+    &--ue {
+      width: 75%;
+    }
+    &--agh {
+      width: 40%;
+      margin-top: 1rem;
+    }
+    &--zsg {
+      width: 50%;
+    }
+  }
+}
