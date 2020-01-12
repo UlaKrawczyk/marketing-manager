@@ -13,6 +13,8 @@
   }
 
   &__gallery-item {
+    position: relative;
+
     &--1 {
       grid-column: 1 / span 1;
       grid-row: 1 / span 2;
@@ -43,6 +45,10 @@
       grid-column: 3 / span 1;
       grid-row: 5 / span 1;
     }
+
+    &:hover .projects__gallery-hover {
+      opacity: 1;
+    }
   }
 
   &__gallery-img {
@@ -50,5 +56,37 @@
     height: 100%;
     display: block;
     object-fit: cover;
+  }
+
+  &__gallery-hover {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 4rem);
+    height: calc(100% - 4rem);
+
+    background-color: rgba(#fff, 0.9);
+    color: var(--color-primary);
+    text-transform: uppercase;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    transition: 0.5s ease-out;
+  }
+
+  &__gallery-plus {
+    display: block;
+    margin-top: 1rem;
+    width: 3rem;
+    font-size: 2.5rem;
+    line-height: 1;
+    text-align: center;
+    border: var(--line);
+    cursor: pointer;
   }
 }
