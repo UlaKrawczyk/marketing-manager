@@ -1,20 +1,20 @@
 .slide {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-row-gap: 2rem;
+  //grid-row-gap: 1rem;
   justify-items: center;
-  margin: 5rem 0;
+  margin: 4rem 0;
 
   &__icon {
     fill: var(--color-grey-light);
-    width: 12rem;
+    width: 9rem;
     filter: drop-shadow(var(--shadow-icon));
 
     &--sphere {
-      width: 12.5rem;
+      width: 9.5rem;
     }
     &--computer {
-      width: 15rem;
+      width: 11rem;
     }
   }
 
@@ -24,7 +24,7 @@
   }
 
   &__skill {
-    font-size: 2.5rem;
+    font-size: 2.1rem;
     font-weight: 500;
     text-transform: uppercase;
     color: var(--color-grey-light);

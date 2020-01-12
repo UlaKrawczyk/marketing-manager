@@ -19,8 +19,8 @@
 
     display: grid;
     grid-template-columns: minmax(min-content, max-content);
-    grid-template-rows: repeat(2, min-content) min-content 1fr;
-    grid-row-gap: 1.5rem;
+    grid-template-rows: repeat(3, min-content) 1fr;
+    grid-row-gap: 1.2rem;
     align-items: center;
   }
 
@@ -29,7 +29,7 @@
     font-size: 4rem;
     letter-spacing: 0.5px;
     text-transform: uppercase;
-    margin: 0 0 1.4rem 0;
+    margin: 0 0 1rem 0;
 
     &--2 {
       display: block;
@@ -41,7 +41,7 @@
   }
 
   &__paragraph {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
   }
 
   &__text {

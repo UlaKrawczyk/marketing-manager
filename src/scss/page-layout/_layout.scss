@@ -5,7 +5,7 @@
     repeat(6, [col-start] minmax(min-content, 19.5rem) [col-end])
     [center-end right-start] minmax(6rem, 1fr) [right-end];
 
-  grid-template-rows: 16vh minmax(52vh, min-content) minmax(10vh, min-content) repeat(10, min-content);
+  grid-template-rows: 16vh minmax(56vh, min-content) minmax(10vh, min-content) repeat(10, min-content);
 }
 
 .header {
