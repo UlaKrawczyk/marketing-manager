@@ -53,11 +53,22 @@
   background-size: cover;
   background-position: center;
   filter: blur(1px);
+
+  &--hobbies {
+    grid-row: 11 / 12;
+    background-image: linear-gradient(to bottom, rgba(#5a5855, 0.45), rgba(white, 0.35)),
+      url(../assets/img/hobby-scroll-medium.jpg);
+    filter: blur(1.5px) sepia(35%) brightness(0.7);
+  }
 }
 
 .skills-slide-container {
   grid-column: center-start / center-end;
   grid-row: 6 / 7;
+
+  &--hobbies {
+    grid-row: 11 / 12;
+  }
 }
 
 .experience-background {
@@ -87,20 +98,21 @@
 
 .hobbies {
   grid-column: center-start / center-end;
-  background-color: yellow;
+  margin-bottom: 12rem;
 }
 
-.hobbies-skills {
+.contact-background {
   grid-column: left-start / right-end;
-  background-color: pink;
+  grid-row: 12 / 13;
+  background-color: var(--color-grey-light);
 }
-
-.contact {
+.contact-container {
   grid-column: center-start / center-end;
-  background-color: limegreen;
+  grid-row: 12 / 13;
+  margin: 10rem 0;
 }
 
 .footer {
-  grid-column: left-start / right-end;
-  background-color: pink;
+  grid-column: center-start / center-end;
+  margin: 3rem 0;
 }

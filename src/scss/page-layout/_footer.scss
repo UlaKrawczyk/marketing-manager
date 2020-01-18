@@ -1,0 +1,17 @@
+.footer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+
+  &__title {
+    font-family: var(--font-Grymulka);
+    font-size: 2rem;
+    text-transform: uppercase;
+  }
+
+  &__svg {
+    width: 1.7rem;
+    height: 1.7rem;
+    fill: var(--color-primary);
+  }
+}

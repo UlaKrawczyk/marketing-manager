@@ -44,10 +44,12 @@
 
 .heading__quaternary {
   font-size: 2rem;
-  margin-bottom: 0.5rem;
   font-weight: 500;
 
   &--uppercase {
     text-transform: uppercase;
+  }
+  &--gold {
+    color: var(--color-primary);
   }
 }

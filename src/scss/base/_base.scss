@@ -6,7 +6,7 @@
 
   --font-primary: "Raleway", sans-serif;
   --font-headings: "Shadows Into Light Two", cursive;
-  --font-Grymulka: "Give You Glory", cursive;
+  --font-Grymulka: "Megrim", cursive;
 
   --shadow-box-big: 0 2rem 3rem rgba(68, 70, 85, 0.38);
   --shadow-box-round: 0 0 3rem rgba(68, 70, 85, 0.35);
@@ -34,6 +34,7 @@ $bp-tiny: 21.88em; //350px
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 
   @media only screen and (max-width: $bp-large) {
     font-size: 55%;

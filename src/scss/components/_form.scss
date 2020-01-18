@@ -1,0 +1,93 @@
+.form {
+  input,
+  label,
+  textarea {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    //background-color: white;
+  }
+
+  input {
+    display: block;
+    width: 100%;
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-bottom: 2px solid transparent;
+    transition: 0.3s;
+
+    &::placeholder {
+      font-size: 1.4rem;
+    }
+    &:focus {
+      outline: none;
+      border-bottom: 2px solid var(--color-primary);
+      box-shadow: var(--shadow-button);
+    }
+  }
+
+  label {
+    padding-left: 1.5rem;
+    font-size: 1.2rem;
+    transition: 0.3s;
+  }
+
+  input:placeholder-shown + label {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-5px);
+  }
+
+  textarea {
+    width: 100%;
+    padding: 1.5rem;
+    color: var(--color-primary);
+    border: none;
+  }
+
+  &__button {
+    &,
+    &:link,
+    &:visited {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      margin-top: 1.5rem;
+      padding: 1rem;
+      border: none;
+      background-color: var(--color-primary);
+      color: white;
+      text-transform: uppercase;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: var(--shadow-button);
+      transform: translateY(-2px);
+    }
+    &:active {
+      box-shadow: var(--shadow-button-active);
+      transform: translateY(0);
+    }
+  }
+
+  &__icon {
+    margin-left: 1rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    fill: white;
+    transition: 0.3s;
+  }
+
+  &__button:hover {
+    color: var(--color-primary);
+    background-color: white;
+    border: var(--line);
+  }
+  &__button:hover &__icon {
+    fill: var(--color-primary);
+  }
+}

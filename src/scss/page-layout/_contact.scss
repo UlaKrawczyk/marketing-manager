@@ -1,0 +1,38 @@
+.contact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 1rem;
+
+  &__content {
+  }
+
+  &__data {
+  }
+
+  &__line {
+    display: flex;
+    align-items: center;
+    margin-left: 3rem;
+    margin-top: 2rem;
+
+    &:first-child {
+      margin-top: 4rem;
+    }
+  }
+
+  &__icon {
+    width: 4rem;
+    height: 4rem;
+    border: var(--line);
+
+    margin-right: 2rem;
+    padding: 0.5rem;
+    fill: var(--color-primary);
+  }
+
+  &__form {
+    margin: 1rem 3rem 0 12rem;
+    padding: 3rem;
+    box-shadow: var(--shadow-box-round);
+  }
+}

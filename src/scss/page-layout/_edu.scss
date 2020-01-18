@@ -6,7 +6,7 @@
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     grid-column-gap: 6rem;
     grid-row-gap: 6rem;
-    margin: 0 3rem;
+    margin: 0 5rem;
   }
 
   &__card {
@@ -18,6 +18,11 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    transition: all 0.2s;
+
+    &:hover {
+      transform: translateY(-7px) scale(1.05);
+    }
   }
   &__img {
     justify-self: flex-end;

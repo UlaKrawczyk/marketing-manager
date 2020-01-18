@@ -10,11 +10,20 @@
     width: 9rem;
     filter: drop-shadow(var(--shadow-icon));
 
+    &--bubbles {
+      width: 9.7rem;
+    }
     &--sphere {
       width: 9.5rem;
     }
     &--computer {
       width: 11rem;
+    }
+    &--users {
+      width: 9.5rem;
+    }
+    &--visualstudio2 {
+      align-self: center;
     }
   }
 

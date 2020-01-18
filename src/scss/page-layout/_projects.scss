@@ -1,14 +1,14 @@
 .projects {
   &__heading {
     display: grid;
-    grid-template-columns: 60% 40%;
+    grid-template-columns: 60% 1fr;
     grid-column-gap: 1rem;
   }
 
   &__gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(5, 16vw);
+    grid-template-rows: repeat(5, 14vw);
     grid-gap: 3rem;
   }
 
@@ -66,8 +66,9 @@
     width: calc(100% - 4rem);
     height: calc(100% - 4rem);
 
-    background-color: rgba(#fff, 0.9);
+    background-color: rgba(#fff, 0.915);
     color: var(--color-primary);
+    font-weight: 500;
     text-transform: uppercase;
 
     display: flex;
@@ -76,8 +77,13 @@
     justify-content: center;
 
     opacity: 0;
-    transition: 0.5s ease-out;
+    transition: 0.4s ease-out;
   }
+
+  // &__gallery-text {
+  //   background-color: #d1a36f2f;
+  //   padding: 0.4rem 0.9rem;
+  // }
 
   &__gallery-plus {
     display: block;

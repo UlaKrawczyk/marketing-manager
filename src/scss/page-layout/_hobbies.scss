@@ -1,0 +1,55 @@
+.hobbies {
+  position: relative;
+
+  &__heading {
+    display: grid;
+    grid-template-columns: 55% 1fr;
+    grid-column-gap: 1rem;
+  }
+
+  &__stories {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 4rem;
+  }
+
+  &__image {
+    grid-row: 1 / 2;
+    height: 25rem;
+    background-size: cover;
+    background-position: center;
+
+    &--1 {
+      background-image: url(../assets/img/hobby-web-small.jpg);
+    }
+    &--2 {
+      background-image: url(../assets/img/hobby-literature-small.jpg);
+    }
+    &--3 {
+      background-image: url(../assets/img/hobby-foto-small.jpg);
+    }
+  }
+
+  &__content {
+    grid-row: 2 / 3;
+    margin: -7rem 2.5rem 0 2.5rem;
+    padding: 3.5rem 3rem;
+    box-shadow: var(--shadow-box-round);
+    background-color: #fff;
+    text-align: center;
+  }
+
+  &__additional-heading {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    margin-bottom: -12rem;
+    z-index: 5;
+
+    font-family: var(--font-headings);
+    font-size: 3.6rem;
+    line-height: 0.9;
+    text-transform: uppercase;
+    color: var(--color-primary);
+  }
+}

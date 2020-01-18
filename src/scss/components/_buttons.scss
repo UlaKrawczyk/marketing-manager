@@ -8,6 +8,10 @@
     align-self: flex-end;
   }
 
+  &__footer {
+    justify-self: end;
+  }
+
   &__shape,
   &__shape:link,
   &__shape:visited {
@@ -23,6 +27,10 @@
     transition: 0.5s;
     cursor: pointer;
   }
+  &__shape--footer {
+    margin-right: 0;
+    margin-left: 1.2rem;
+  }
 
   &__shape:hover &__arrow {
     animation: pulsate 1.5s ease-in-out infinite;
@@ -31,6 +39,7 @@
   &__arrow {
     fill: white;
     width: 2rem;
+    height: 2rem;
   }
 
   &__text {
