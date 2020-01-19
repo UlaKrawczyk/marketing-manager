@@ -3,10 +3,11 @@
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 1rem;
 
-  &__content {
+  @media only screen and (max-width: $bp-medium) {
+    grid-template-columns: 55% 1fr;
   }
 
-  &__data {
+  &__content {
   }
 
   &__line {
@@ -34,5 +35,10 @@
     margin: 1rem 3rem 0 12rem;
     padding: 3rem;
     box-shadow: var(--shadow-box-round);
+
+    @media only screen and (max-width: $bp-medium) {
+      margin: 1rem 3rem 0 4rem;
+      padding: 2.5rem;
+    }
   }
 }

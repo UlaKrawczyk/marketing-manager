@@ -3,12 +3,16 @@
   grid-template-columns: repeat(3, 1fr);
   //grid-row-gap: 1rem;
   justify-items: center;
-  margin: 4rem 0;
+  margin: 5rem 0;
 
   &__icon {
     fill: var(--color-grey-light);
     width: 9rem;
+    height: 12rem;
+    margin-bottom: 1.5rem;
     filter: drop-shadow(var(--shadow-icon));
+
+    align-self: center;
 
     &--bubbles {
       width: 9.7rem;

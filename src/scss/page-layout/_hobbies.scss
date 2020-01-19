@@ -37,6 +37,11 @@
     box-shadow: var(--shadow-box-round);
     background-color: #fff;
     text-align: center;
+
+    @media only screen and (max-width: $bp-medium) {
+      margin: -7rem 2rem 0 2rem;
+      padding: 3rem 2rem;
+    }
   }
 
   &__additional-heading {

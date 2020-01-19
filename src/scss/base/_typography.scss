@@ -9,7 +9,7 @@
 
   &__skills {
     text-align: right;
-    margin-left: 6rem;
+    margin-left: 7.5rem;
     margin-bottom: 1.4rem;
   }
 
@@ -21,7 +21,7 @@
 .heading__secondary {
   margin-bottom: 2rem;
   font-family: var(--font-headings);
-  font-size: 3.8rem;
+  font-size: 3.7rem;
   text-transform: uppercase;
   font-weight: 400;
 
@@ -33,10 +33,15 @@
   &--right {
     text-align: right;
   }
+
+  @media only screen and (max-width: $bp-largest) {
+    font-size: 3.4rem;
+  }
 }
 
 .heading__tertiary {
   margin-bottom: 8rem;
+  margin-left: 1rem;
   font-size: 1.8rem;
   text-align: right;
   font-weight: 400;
@@ -51,5 +56,12 @@
   }
   &--gold {
     color: var(--color-primary);
+  }
+  &--blue {
+    color: var(--color-secondary);
+  }
+
+  @media only screen and (max-width: $bp-largest) {
+    font-size: 1.7rem;
   }
 }

@@ -34,9 +34,16 @@
     &--2 {
       display: block;
       font-size: 2.5rem;
+      @media only screen and (max-width: $bp-medium) {
+        font-size: 2.2rem;
+      }
     }
     &--3 {
       color: var(--color-secondary);
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+      font-size: 3.5rem;
     }
   }
 
