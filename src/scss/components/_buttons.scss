@@ -6,6 +6,12 @@
   &__header {
     margin-top: 3rem;
     align-self: flex-end;
+
+    @media (orientation: portrait) and (max-width: $bp-medium-grid) {
+      grid-row: 3 / 4;
+      margin-top: 0;
+      justify-content: flex-end;
+    }
   }
 
   &__footer {
@@ -30,6 +36,12 @@
   &__shape--footer {
     margin-right: 0;
     margin-left: 1.2rem;
+  }
+  &__shape--header {
+    @media (orientation: portrait) and (max-width: $bp-medium-grid) {
+      order: 2;
+      margin-left: 1.2rem;
+    }
   }
 
   &__shape:hover &__arrow {

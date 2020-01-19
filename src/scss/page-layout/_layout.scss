@@ -6,6 +6,10 @@
     [center-end right-start] minmax(6rem, 1fr) [right-end];
 
   grid-template-rows: 16vh minmax(56vh, min-content) minmax(10vh, min-content) repeat(10, min-content);
+
+  @media (orientation: portrait) and (max-width: $bp-medium-grid) {
+    grid-template-rows: 8vh minmax(30vh, min-content) minmax(6vh, min-content) repeat(10, min-content);
+  }
 }
 
 .header {
