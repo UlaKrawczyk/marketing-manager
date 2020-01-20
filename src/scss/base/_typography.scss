@@ -2,6 +2,10 @@
   &__about {
     margin-bottom: 1.5rem;
     margin-right: 6rem;
+
+    @media only screen and (max-width: $bp-medium-grid) {
+      margin-right: 0;
+    }
   }
   &__blue {
     color: var(--color-secondary);
@@ -11,6 +15,11 @@
     text-align: right;
     margin-left: 7.5rem;
     margin-bottom: 1.4rem;
+    @media only screen and (max-width: $bp-medium-grid) {
+      text-align: left;
+      margin-left: 0;
+      margin-bottom: 1.4rem;
+    }
   }
 
   &__edu {
@@ -32,6 +41,18 @@
 
   &--right {
     text-align: right;
+
+    @media only screen and (max-width: $bp-medium-grid) {
+      text-align: left;
+      display: flex;
+      align-items: baseline;
+    }
+    span {
+      @media only screen and (max-width: $bp-medium-grid) {
+        order: -1;
+        margin-right: 2rem;
+      }
+    }
   }
 
   @media only screen and (max-width: $bp-largest) {
