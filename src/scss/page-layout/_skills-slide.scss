@@ -5,35 +5,72 @@
   justify-items: center;
   margin: 5rem 0;
 
+  @media only screen and (max-width: $bp-small) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, min-content);
+    align-items: center;
+  }
+
   &__icon {
     fill: var(--color-grey-light);
     width: 9rem;
     height: 12rem;
     margin-bottom: 1.5rem;
     filter: drop-shadow(var(--shadow-icon));
-
     align-self: center;
+
+    @media only screen and (max-width: $bp-small) {
+      margin-bottom: 0;
+      margin-right: -6rem;
+    }
 
     &--bubbles {
       width: 9.7rem;
+      @media only screen and (max-width: $bp-small) {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+      }
     }
     &--sphere {
       width: 9.5rem;
     }
     &--computer {
       width: 11rem;
+      @media only screen and (max-width: $bp-small) {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+      }
+    }
+    &--images {
+      @media only screen and (max-width: $bp-small) {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+      }
     }
     &--users {
       width: 9.5rem;
+      @media only screen and (max-width: $bp-small) {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+      }
     }
     &--visualstudio2 {
       align-self: center;
+      @media only screen and (max-width: $bp-small) {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+      }
     }
   }
 
   &__text {
     text-align: center;
     z-index: 5; //to stop filter: blur (_layout) from bluring the text
+
+    @media only screen and (max-width: $bp-small) {
+      text-align: left;
+      justify-self: start;
+    }
   }
 
   &__skill {
@@ -42,5 +79,9 @@
     text-transform: uppercase;
     color: var(--color-grey-light);
     text-shadow: var(--shadow-icon);
+
+    @media only screen and (max-width: $bp-medium-grid) {
+      font-size: 2rem;
+    }
   }
 }
