@@ -23,9 +23,12 @@
     z-index: 2;
 
     @media (orientation: portrait) and (max-width: $bp-medium-grid) {
-      grid-column: 1 / -1;
+      grid-column: 1 / 2;
       grid-row: 2 / 3;
-      padding: 4rem 1.8rem 4rem 5rem;
+      padding: 5rem;
+    }
+    @media (orientation: portrait) and (max-width: $bp-smallest) {
+      padding: 3rem;
     }
 
     display: grid;
@@ -54,6 +57,12 @@
       @media only screen and (max-width: $bp-medium) {
         font-size: 2.2rem;
       }
+      @media only screen and (max-width: $bp-tiny-big) {
+        font-size: 2rem;
+      }
+      @media only screen and (max-width: $bp-tiny) {
+        font-size: 1.9rem;
+      }
     }
     &--3 {
       color: var(--color-secondary);
@@ -61,6 +70,13 @@
 
     @media only screen and (max-width: $bp-medium) {
       font-size: 3.5rem;
+    }
+    @media only screen and (max-width: $bp-tiny-big) {
+      font-size: 3.15rem;
+      letter-spacing: 0;
+    }
+    @media only screen and (max-width: $bp-tiny) {
+      font-size: 3rem;
     }
   }
 

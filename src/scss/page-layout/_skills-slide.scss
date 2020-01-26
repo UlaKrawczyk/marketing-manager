@@ -1,14 +1,19 @@
 .slide {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  //grid-row-gap: 1rem;
   justify-items: center;
   margin: 5rem 0;
 
   @media only screen and (max-width: $bp-small) {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 58%;
     grid-template-rows: repeat(3, min-content);
     align-items: center;
+  }
+  @media only screen and (max-width: $bp-smallest) {
+    margin: 3rem 0;
+  }
+  @media only screen and (max-width: $bp-tiny) {
+    grid-template-columns: 1fr 64%;
   }
 
   &__icon {
@@ -21,7 +26,14 @@
 
     @media only screen and (max-width: $bp-small) {
       margin-bottom: 0;
-      margin-right: -6rem;
+    }
+    @media only screen and (max-width: $bp-smallest) {
+      width: 8rem;
+      height: 11rem;
+    }
+    @media only screen and (max-width: $bp-tiny) {
+      width: 7rem;
+      height: 10rem;
     }
 
     &--bubbles {
@@ -30,15 +42,34 @@
         grid-column: 1 / 2;
         grid-row: 1 / 2;
       }
+      @media only screen and (max-width: $bp-smallest) {
+        width: 8.7rem;
+      }
+      @media only screen and (max-width: $bp-tiny) {
+        width: 7.7rem;
+      }
     }
     &--sphere {
       width: 9.5rem;
+      @media only screen and (max-width: $bp-smallest) {
+        width: 8.5rem;
+      }
+      @media only screen and (max-width: $bp-tiny) {
+        width: 7.5rem;
+      }
     }
     &--computer {
       width: 11rem;
       @media only screen and (max-width: $bp-small) {
         grid-column: 1 / 2;
         grid-row: 2 / 3;
+        width: 10.5rem;
+      }
+      @media only screen and (max-width: $bp-smallest) {
+        width: 9.5rem;
+      }
+      @media only screen and (max-width: $bp-tiny) {
+        width: 8.5rem;
       }
     }
     &--images {
@@ -52,6 +83,12 @@
       @media only screen and (max-width: $bp-small) {
         grid-column: 1 / 2;
         grid-row: 3 / 4;
+      }
+      @media only screen and (max-width: $bp-smallest) {
+        width: 8.5rem;
+      }
+      @media only screen and (max-width: $bp-tiny) {
+        width: 7.5rem;
       }
     }
     &--visualstudio2 {
@@ -82,6 +119,12 @@
 
     @media only screen and (max-width: $bp-medium-grid) {
       font-size: 2rem;
+    }
+    @media only screen and (max-width: $bp-smallest) {
+      font-size: 1.8rem;
+    }
+    @media only screen and (max-width: $bp-tiny) {
+      font-size: 1.7rem;
     }
   }
 }

@@ -15,10 +15,11 @@
     text-align: right;
     margin-left: 7.5rem;
     margin-bottom: 1.4rem;
+
     @media only screen and (max-width: $bp-medium-grid) {
       text-align: left;
       margin-left: 0;
-      margin-bottom: 1.4rem;
+      margin-bottom: 1.2rem;
     }
   }
 
@@ -43,6 +44,20 @@
   &--span {
     letter-spacing: 1px;
     font-size: 4.2rem;
+
+    @media only screen and (max-width: $bp-largest) {
+      font-size: 4rem;
+    }
+    @media only screen and (max-width: $bp-medium-grid) {
+      font-size: 3.7rem;
+    }
+    @media only screen and (max-width: $bp-smallest) {
+      font-size: 3.5rem;
+    }
+    @media only screen and (max-width: $bp-tiny) {
+      font-size: 2.8rem;
+      letter-spacing: 0;
+    }
   }
 
   &--right {
@@ -64,6 +79,16 @@
   @media only screen and (max-width: $bp-largest) {
     font-size: 3.4rem;
   }
+  @media only screen and (max-width: $bp-medium-grid) {
+    font-size: 3.2rem;
+  }
+  @media only screen and (max-width: $bp-smallest) {
+    font-size: 3rem;
+  }
+  @media only screen and (max-width: $bp-tiny) {
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+  }
 }
 
 .heading__tertiary {
@@ -73,8 +98,13 @@
   font-size: 1.8rem;
   text-align: right;
   font-weight: 400;
+
   @media only screen and (max-width: $bp-large-mobile) {
     margin-bottom: 5rem;
+  }
+  @media only screen and (max-width: $bp-tiny) {
+    font-size: 1.7rem;
+    margin-bottom: 3rem;
   }
 }
 

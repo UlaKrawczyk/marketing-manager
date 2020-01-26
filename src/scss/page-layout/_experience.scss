@@ -52,6 +52,10 @@
       justify-items: start;
       padding: 3rem 6rem;
     }
+    @media only screen and (max-width: $bp-smallest) {
+      justify-items: start;
+      padding: 3rem;
+    }
   }
 
   &__text {

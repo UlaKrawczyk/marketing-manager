@@ -16,6 +16,12 @@
       repeat(6, [col-start] minmax(min-content, 19.5rem) [col-end])
       [center-end right-start] minmax(4rem, 1fr) [right-end];
   }
+  @media only screen and (max-width: $bp-tiny) {
+    grid-template-columns:
+      [left-start] minmax(3rem, 1fr) [left-end center-start]
+      repeat(6, [col-start] minmax(min-content, 19.5rem) [col-end])
+      [center-end right-start] minmax(3rem, 1fr) [right-end];
+  }
 }
 
 .header {
@@ -45,6 +51,13 @@
     margin-top: 8rem;
     margin-bottom: 0;
   }
+  @media only screen and (max-width: $bp-smallest) {
+    margin-top: 6rem;
+    margin-bottom: 1.5rem;
+  }
+  @media only screen and (max-width: $bp-tiny) {
+    margin-top: 5rem;
+  }
 }
 
 .skills-background {
@@ -59,6 +72,13 @@
   @media only screen and (max-width: $bp-medium-grid) {
     margin-top: 8rem;
     margin-bottom: 0;
+  }
+  @media only screen and (max-width: $bp-smallest) {
+    margin-top: 6rem;
+    margin-bottom: 1.5rem;
+  }
+  @media only screen and (max-width: $bp-tiny) {
+    margin-top: 5rem;
   }
 }
 
@@ -101,6 +121,12 @@
   @media only screen and (max-width: $bp-medium-tablet) {
     margin: 8rem 0 5rem 0;
   }
+  @media only screen and (max-width: $bp-smallest) {
+    margin: 6rem 0 3rem 0;
+  }
+  @media only screen and (max-width: $bp-tiny) {
+    margin: 5rem 0 2rem 0;
+  }
 }
 
 .education {
@@ -118,6 +144,12 @@
   @media only screen and (max-width: $bp-small) {
     grid-template-columns: 1fr;
   }
+  @media only screen and (max-width: $bp-smallest) {
+    margin: 6rem 0;
+  }
+  @media only screen and (max-width: $bp-tiny) {
+    margin: 5rem 0;
+  }
 }
 
 .projects {
@@ -127,6 +159,12 @@
   @media only screen and (max-width: $bp-medium-tablet) {
     margin-bottom: 8rem;
   }
+  @media only screen and (max-width: $bp-smallest) {
+    margin-bottom: 6rem;
+  }
+  @media only screen and (max-width: $bp-tiny) {
+    margin-bottom: 5rem;
+  }
 }
 
 .hobbies {
@@ -135,6 +173,9 @@
 
   @media only screen and (max-width: $bp-medium-grid) {
     margin-bottom: 8rem;
+  }
+  @media only screen and (max-width: $bp-smallest) {
+    margin-bottom: 6rem;
   }
 }
 
@@ -147,6 +188,16 @@
   grid-column: center-start / center-end;
   grid-row: 12 / 13;
   margin: 10rem 0;
+
+  @media only screen and (max-width: $bp-medium-grid) {
+    margin: 8rem 0;
+  }
+  @media only screen and (max-width: $bp-smallest) {
+    margin: 6rem 0;
+  }
+  @media only screen and (max-width: $bp-tiny) {
+    margin: 5rem 0;
+  }
 }
 
 .footer {

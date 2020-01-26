@@ -113,15 +113,16 @@
 
     @media only screen and (max-width: $bp-medium-grid) {
       margin-bottom: -8rem;
+      font-size: 3.4rem;
     }
     @media only screen and (max-width: $bp-small) {
-      left: 30%;
+      width: 100%;
+      left: 0;
+      text-align: center;
     }
     @media only screen and (max-width: $bp-smallest) {
-      left: 15%;
-    }
-    @media only screen and (max-width: $bp-tiny-big) {
-      left: 8%;
+      margin-bottom: -6rem;
+      font-size: 3rem;
     }
   }
 }

@@ -42,6 +42,13 @@
     display: flex;
     align-items: center;
     margin-top: 1.3rem;
+
+    @media only screen and (max-width: $bp-medium-grid) {
+      margin-top: 1rem;
+    }
+    @media only screen and (max-width: $bp-smallest) {
+      margin-top: 0.8rem;
+    }
   }
 
   &__done-svg {
