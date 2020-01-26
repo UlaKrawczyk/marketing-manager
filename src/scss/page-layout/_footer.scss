@@ -1,7 +1,12 @@
 .footer {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 60% 1fr;
   align-items: center;
+
+  @media only screen and (max-width: $bp-tiny) {
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 0.8rem;
+  }
 
   &__title {
     font-family: var(--font-Grymulka);

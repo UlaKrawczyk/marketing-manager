@@ -10,6 +10,12 @@
   @media (orientation: portrait) and (max-width: $bp-medium-grid) {
     grid-template-rows: 8vh minmax(30vh, min-content) minmax(6vh, min-content) repeat(10, min-content);
   }
+  @media only screen and (max-width: $bp-smallest) {
+    grid-template-columns:
+      [left-start] minmax(4rem, 1fr) [left-end center-start]
+      repeat(6, [col-start] minmax(min-content, 19.5rem) [col-end])
+      [center-end right-start] minmax(4rem, 1fr) [right-end];
+  }
 }
 
 .header {
@@ -36,6 +42,7 @@
   grid-row: 4 / 5;
   margin: 10rem 0;
   @media only screen and (max-width: $bp-medium-grid) {
+    margin-top: 8rem;
     margin-bottom: 0;
   }
 }
@@ -91,6 +98,9 @@
   grid-column: center-start / center-end;
   grid-row: 7 / 8;
   margin: 10rem 0;
+  @media only screen and (max-width: $bp-medium-tablet) {
+    margin: 8rem 0 5rem 0;
+  }
 }
 
 .education {
@@ -98,18 +108,34 @@
   margin: 10rem 0;
 
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 35% 1fr;
   grid-column-gap: 2rem;
+
+  @media only screen and (max-width: $bp-medium-tablet) {
+    margin: 8rem 0;
+    grid-column-gap: 1rem;
+  }
+  @media only screen and (max-width: $bp-small) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .projects {
   grid-column: center-start / center-end;
   margin-bottom: 10rem;
+
+  @media only screen and (max-width: $bp-medium-tablet) {
+    margin-bottom: 8rem;
+  }
 }
 
 .hobbies {
   grid-column: center-start / center-end;
   margin-bottom: 12rem;
+
+  @media only screen and (max-width: $bp-medium-grid) {
+    margin-bottom: 8rem;
+  }
 }
 
 .contact-background {

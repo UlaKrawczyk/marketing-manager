@@ -3,6 +3,10 @@
     display: grid;
     grid-template-columns: 60% 1fr;
     grid-column-gap: 1rem;
+
+    @media only screen and (max-width: $bp-largest) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__gallery {
@@ -10,40 +14,114 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(5, 14vw);
     grid-gap: 3rem;
+
+    @media only screen and (max-width: $bp-large-mobile) {
+      grid-template-rows: repeat(4, 14vw) 20vw;
+    }
+    @media only screen and (max-width: $bp-small) {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(4, 40vw);
+      grid-gap: 2rem;
+    }
+    @media only screen and (max-width: $bp-smallest) {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(7, 75vw);
+      grid-gap: 3rem;
+    }
   }
 
   &__gallery-item {
     position: relative;
 
+    @media only screen and (max-width: $bp-smallest) {
+      margin: 0 4rem;
+    }
+
     &--1 {
       grid-column: 1 / span 1;
       grid-row: 1 / span 2;
+      @media only screen and (max-width: $bp-small) {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+      }
+      @media only screen and (max-width: $bp-smallest) {
+        grid-column: 1 / -1;
+        grid-row: 1 / 2;
+      }
     }
     &--2 {
       grid-column: 2 / span 2;
       grid-row: 1 / span 2;
       box-shadow: 0 0 2rem rgba(68, 70, 85, 0.45);
+      @media only screen and (max-width: $bp-small) {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+      }
+      @media only screen and (max-width: $bp-smallest) {
+        grid-column: 1 / -1;
+        grid-row: 2 / 3;
+      }
     }
     &--3 {
       grid-column: 1 / span 2;
       grid-row: 3 / span 2;
+      @media only screen and (max-width: $bp-small) {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+      }
+      @media only screen and (max-width: $bp-smallest) {
+        grid-column: 1 / -1;
+        grid-row: 3 / 4;
+      }
     }
     &--4 {
       grid-column: 3 / span 1;
       grid-row: 3 / span 2;
       box-shadow: 0 0 2rem rgba(68, 70, 85, 0.45);
+      @media only screen and (max-width: $bp-small) {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+      }
+      @media only screen and (max-width: $bp-smallest) {
+        grid-column: 1 / -1;
+        grid-row: 4 / 5;
+      }
     }
     &--5 {
       grid-column: 1 / span 1;
       grid-row: 5 / span 1;
+      @media only screen and (max-width: $bp-small) {
+        grid-column: 1 / -1;
+        grid-row: 4 / 5;
+      }
+      @media only screen and (max-width: $bp-smallest) {
+        grid-column: 1 / -1;
+        grid-row: 6 / 7;
+      }
     }
     &--6 {
       grid-column: 2 / span 1;
       grid-row: 5 / span 1;
+      @media only screen and (max-width: $bp-small) {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+      }
+      @media only screen and (max-width: $bp-smallest) {
+        grid-column: 1 / -1;
+        grid-row: 5 / 6;
+      }
     }
     &--7 {
       grid-column: 3 / span 1;
       grid-row: 5 / span 1;
+      @media only screen and (max-width: $bp-small) {
+        grid-column: 2 / 3;
+        grid-row: 3 / 4;
+      }
+      @media only screen and (max-width: $bp-smallest) {
+        grid-column: 1 / -1;
+        grid-row: 7 / 8;
+      }
     }
 
     &:hover .projects__gallery-hover {
@@ -56,6 +134,12 @@
     height: 100%;
     display: block;
     object-fit: cover;
+    &--5 {
+      object-position: 0 10%;
+    }
+    &--7 {
+      object-position: 80%;
+    }
   }
 
   &__gallery-hover {
@@ -65,6 +149,11 @@
     transform: translate(-50%, -50%);
     width: calc(100% - 4rem);
     height: calc(100% - 4rem);
+
+    @media only screen and (hover: hover) and (max-width: $bp-large-mobile) {
+      width: calc(100% - 2rem);
+      height: calc(100% - 2rem);
+    }
 
     background-color: rgba(#fff, 0.915);
     color: var(--color-primary);
@@ -78,12 +167,23 @@
 
     opacity: 0;
     transition: 0.4s ease-out;
-  }
 
-  // &__gallery-text {
-  //   background-color: #d1a36f2f;
-  //   padding: 0.4rem 0.9rem;
-  // }
+    @media only screen and (hover: none) and (max-width: 1280px) {
+      opacity: 1;
+      top: auto;
+      bottom: 0;
+      left: 0;
+      transform: translate(0, 0);
+      width: 100%;
+      height: auto;
+      padding: 1rem;
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+      text-align: center;
+      align-items: flex-end;
+    }
+  }
 
   &__gallery-plus {
     display: block;
@@ -94,5 +194,11 @@
     text-align: center;
     border: var(--line);
     cursor: pointer;
+  }
+
+  &__gallery-text {
+    @media only screen and (hover: none) and (max-width: 1280px) {
+      margin-right: 1rem;
+    }
   }
 }

@@ -6,6 +6,12 @@
   @media only screen and (max-width: $bp-medium) {
     grid-template-columns: 55% 1fr;
   }
+  @media only screen and (max-width: $bp-medium-grid) {
+    grid-template-columns: 57% 1fr;
+  }
+  @media only screen and (max-width: $bp-medium-tablet) {
+    grid-template-columns: 1fr;
+  }
 
   &__content {
   }
@@ -39,6 +45,22 @@
     @media only screen and (max-width: $bp-medium) {
       margin: 1rem 3rem 0 4rem;
       padding: 2.5rem;
+    }
+    @media only screen and (max-width: $bp-medium-grid) {
+      margin: 1rem 0 0 4rem;
+      padding: 1.8rem;
+    }
+    @media only screen and (max-width: $bp-medium-tablet) {
+      margin: 5rem 6rem 0 6rem;
+      padding: 3rem;
+    }
+    @media only screen and (max-width: $bp-small) {
+      margin: 5rem 3rem 0 3rem;
+      padding: 2.5rem;
+    }
+    @media only screen and (max-width: $bp-tiny-big) {
+      margin: 5rem 0 0 0;
+      padding: 2rem;
     }
   }
 }

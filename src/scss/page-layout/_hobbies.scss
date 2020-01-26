@@ -5,12 +5,30 @@
     display: grid;
     grid-template-columns: 55% 1fr;
     grid-column-gap: 1rem;
+
+    @media only screen and (max-width: $bp-medium-grid) {
+      grid-template-columns: 1fr;
+      grid-gap: 0;
+    }
   }
 
   &__stories {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 4rem;
+
+    @media only screen and (max-width: $bp-medium-grid) {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(6, min-content);
+      grid-gap: 0;
+      margin: 0 7rem;
+    }
+    @media only screen and (max-width: $bp-smallest) {
+      margin: 0 3rem;
+    }
+    @media only screen and (max-width: $bp-tiny) {
+      margin: 0;
+    }
   }
 
   &__image {
@@ -21,12 +39,24 @@
 
     &--1 {
       background-image: url(../assets/img/hobby-web-small.jpg);
+
+      @media only screen and (max-width: $bp-medium-grid) {
+        grid-row: 1/2;
+      }
     }
     &--2 {
       background-image: url(../assets/img/hobby-literature-small.jpg);
+
+      @media only screen and (max-width: $bp-medium-grid) {
+        grid-row: 3/4;
+      }
     }
     &--3 {
       background-image: url(../assets/img/hobby-foto-small.jpg);
+
+      @media only screen and (max-width: $bp-medium-grid) {
+        grid-row: 5/6;
+      }
     }
   }
 
@@ -41,6 +71,30 @@
     @media only screen and (max-width: $bp-medium) {
       margin: -7rem 2rem 0 2rem;
       padding: 3rem 2rem;
+    }
+    @media only screen and (max-width: $bp-medium-grid) {
+      margin: -7rem 4rem 3rem 4rem;
+      padding: 3rem 3rem;
+    }
+    @media only screen and (max-width: $bp-smallest) {
+      margin: -7rem 2.5rem 3rem 2.5rem;
+      padding: 3rem 2rem;
+    }
+
+    &--1 {
+      @media only screen and (max-width: $bp-medium-grid) {
+        grid-row: 2/3;
+      }
+    }
+    &--2 {
+      @media only screen and (max-width: $bp-medium-grid) {
+        grid-row: 4/5;
+      }
+    }
+    &--3 {
+      @media only screen and (max-width: $bp-medium-grid) {
+        grid-row: 6/7;
+      }
     }
   }
 
@@ -57,8 +111,17 @@
     text-transform: uppercase;
     color: var(--color-primary);
 
+    @media only screen and (max-width: $bp-medium-grid) {
+      margin-bottom: -8rem;
+    }
     @media only screen and (max-width: $bp-small) {
-      left: 35%;
+      left: 30%;
+    }
+    @media only screen and (max-width: $bp-smallest) {
+      left: 15%;
+    }
+    @media only screen and (max-width: $bp-tiny-big) {
+      left: 8%;
     }
   }
 }

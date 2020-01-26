@@ -3,10 +3,28 @@
     grid-column: 1 / -1;
 
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
     grid-column-gap: 6rem;
     grid-row-gap: 6rem;
     margin: 0 5rem;
+
+    @media only screen and (max-width: $bp-large-mobile) {
+      margin: 0 3rem;
+    }
+    @media only screen and (max-width: $bp-medium) {
+      grid-column-gap: 4.5rem;
+      grid-row-gap: 4.5rem;
+    }
+    @media only screen and (max-width: $bp-smallest) {
+      grid-template-columns: 1fr;
+      margin: 0 8rem;
+    }
+    @media only screen and (max-width: $bp-tiny-big) {
+      margin: 0 5rem;
+    }
+    @media only screen and (max-width: $bp-tiny) {
+      margin: 0;
+    }
   }
 
   &__card {
@@ -30,14 +48,23 @@
     &--ue {
       width: 75%;
       margin-top: 5.5em;
+      @media only screen and (max-width: $bp-smallest) {
+        width: 60%;
+      }
     }
     &--agh {
       width: 40%;
       margin-top: 1.5rem;
+      @media only screen and (max-width: $bp-smallest) {
+        width: 30%;
+      }
     }
     &--zsg {
       width: 50%;
       margin-top: 5.5rem;
+      @media only screen and (max-width: $bp-smallest) {
+        width: 35%;
+      }
     }
   }
 }

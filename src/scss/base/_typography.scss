@@ -25,6 +25,12 @@
   &__edu {
     color: var(--color-primary);
   }
+
+  &__contact {
+    @media only screen and (max-width: $bp-medium-tablet) {
+      text-align: right;
+    }
+  }
 }
 
 .heading__secondary {
@@ -61,11 +67,15 @@
 }
 
 .heading__tertiary {
+  margin-top: 1rem;
   margin-bottom: 8rem;
   margin-left: 1rem;
   font-size: 1.8rem;
   text-align: right;
   font-weight: 400;
+  @media only screen and (max-width: $bp-large-mobile) {
+    margin-bottom: 5rem;
+  }
 }
 
 .heading__quaternary {
