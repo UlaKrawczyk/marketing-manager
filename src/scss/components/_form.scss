@@ -42,6 +42,12 @@
     padding: 1.5rem;
     color: var(--color-primary);
     border: none;
+
+    &:focus {
+      outline: none;
+      border-bottom: 2px solid var(--color-primary);
+      box-shadow: var(--shadow-button);
+    }
   }
 
   &__button {

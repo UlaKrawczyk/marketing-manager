@@ -27,9 +27,20 @@
 .header {
   grid-column: left-start / right-end;
   grid-row: 1 / 3;
-  background-image: url(../assets/img/header-foto-medium.jpg);
+  background-image: url(../assets/img/header-foto-small.jpg);
   background-size: cover;
   background-position: top center;
+
+  @media only screen and (min-resolution: 192dpi) and (min-width: 600px),
+    only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 600px),
+    only screen and (min-width: 1200px) {
+    background-image: url(../assets/img/header-foto-medium.jpg);
+  }
+  @media only screen and (min-resolution: 192dpi) and (min-width: 1000px),
+    only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1000px),
+    only screen and (min-width: 2000px) {
+    background-image: url(../assets/img/header-foto-big.jpg);
+  }
 
   &__background {
     grid-column: left-start / right-end;
@@ -86,17 +97,37 @@
   grid-column: left-start / right-end;
   grid-row: 6 / 7;
   background-image: linear-gradient(to bottom, rgba(#5a5855, 0.45), rgba(white, 0.35)),
-    url(../assets/img/about-3-medium.jpg);
+    url(../assets/img/about-3-small.jpg);
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
   filter: blur(1px);
 
+  @media only screen and (min-resolution: 192dpi) and (min-width: 600px),
+    only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 600px),
+    only screen and (min-width: 1200px) {
+    background-image: linear-gradient(to bottom, rgba(#5a5855, 0.45), rgba(white, 0.35)),
+      url(../assets/img/about-3-medium.jpg);
+  }
+
   &--hobbies {
     grid-row: 11 / 12;
     background-image: linear-gradient(to bottom, rgba(#5a5855, 0.45), rgba(white, 0.35)),
-      url(../assets/img/hobby-scroll-medium.jpg);
+      url(../assets/img/hobby-scroll-small.jpg);
     filter: blur(1.5px) sepia(35%) brightness(0.7);
+
+    @media only screen and (min-resolution: 192dpi) and (min-width: 600px),
+      only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 600px),
+      only screen and (min-width: 1200px) {
+      background-image: linear-gradient(to bottom, rgba(#5a5855, 0.45), rgba(white, 0.35)),
+        url(../assets/img/hobby-scroll-medium.jpg);
+    }
+    @media only screen and (min-resolution: 192dpi) and (min-width: 1000px),
+      only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1000px),
+      only screen and (min-width: 2000px) {
+      background-image: linear-gradient(to bottom, rgba(#5a5855, 0.45), rgba(white, 0.35)),
+        url(../assets/img/hobby-scroll-big.jpg);
+    }
   }
 }
 
