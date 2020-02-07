@@ -1,38 +1,34 @@
-# TRILLO 
-## BEST BOOKING PLACE!
+# MARKETING PROJECT MANAGER 
+## MY FIRST WEBSITE RESUME
 
-![page layout](github/trillo.jpg)
+![page layout](github/manager-page.jpg)
 
 
-**If you want to try it out, click here: [Trillo webpage](https://ulakrawczyk.github.io/trillo/)**
+**If you want to try it out, click here: [Ula Krawczyk webpage](https://ulakrawczyk.github.io/marketing-manager/)**
 
-### This is a simple webpage created during the Udemy course to practise css flex-box:
-* using different properties of flex-box to build overall layout and to position the elements on the page
-* custom properties instead of sass variables
+### This is a simple landing page developed to practise what I've learned:
+* semantic html5
+* css3 with grid and flexbox layout
+* sass
 * adding svg icons and using sprite.svg
-* animated buttons
-* currentColors, mask-image
-* images changing in gallery section with js
-* slider images showing different rooms (pure js)
+* project is build on a starter-kit by Maciej Korsan
+* graphic design inpired by http://www.themeperch.net/ and modified in figma
 
-![mobile view in portrait mode](github/trillo-mobile.jpg)
+![my webpage elements](github/manager-page-2.jpg)
 
 
 
 ### Page is fully responsive using:
+* grid layout
 * media queries and correct units
-* changing layout at certain breakpoints
 * responsive images with resolution switching
 * desktop first technique
 
-![mobile view in landscape mode](github/trillo-mobile-2.jpg)
+![mobile view in portrait mode](github/mobile-1.jpg)
 
-#### Browser support was also considered (graceful degradation used).
 
 #### To run my project locally, you need:
 
 `npm install -g gulp-cli`
-
 `npm install`
-
 `gulp`
