@@ -13,11 +13,11 @@
     content="If you'are looking for a Marketing Project Manager you can check my experience and latest projects." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://ulakrawczyk.github.io/marketing-manager/" />
-  <meta property="og:image" content="https://ulakrawczyk.github.io/marketing-manager/assets/img/cover.jpg" />
+  <meta property="og:image" content="https://ulakrawczyk.github.io/marketing-manager/assets/img/cover.png" />
   <meta property="og:image:width" content="1200px" />
   <meta property="og:image:height" content="642px" />
 
-  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+  <link rel="icon" type="image/png" href="assets/icons/creativity.png" />
 
   <link
     href="https://fonts.googleapis.com/css?family=Megrim|Raleway:400,500,600|Shadows+Into+Light+Two&display=swap&subset=latin-ext"
@@ -45,29 +45,30 @@
         <p class="banner__text">Wrocław, ul. Zwycięska 14d/6</p>
       </div>
       <div class="banner__icons">
-        <a href="#" class="banner__icon">
-          <svg class="banner__svg header__svg--linkedin">
+        <a href="#" class="banner__icon" aria-label="idź do strony LinkedIn">
+          <svg class="banner__svg">
             <use xlink:href="assets/icons/sprite.svg#icon-linkedin2"></use>
           </svg>
         </a>
-        <a href="#" class="banner__icon">
-          <svg class="banner__svg header__svg--linkedin">
+        <a href="#" class="banner__icon" aria-label="idź do strony Github">
+          <svg class="banner__svg">
             <use xlink:href="assets/icons/sprite.svg#icon-github"></use>
           </svg>
         </a>
-        <a href="#" class="banner__icon">
-          <svg class="banner__svg header__svg--linkedin">
+        <a href="#" class="banner__icon" aria-label="idź do strony skype">
+          <svg class="banner__svg">
             <use xlink:href="assets/icons/sprite.svg#icon-skype"></use>
           </svg>
         </a>
       </div>
       <div class="button-square button-square__header">
-        <a href="#exp" class="button-square__shape button-square__shape--header">
+        <a href="#exp" class="button-square__shape button-square__shape--header"
+           aria-labelledby="button-exp">
             <svg class="button-square__arrow">
               <use xlink:href="assets/icons/sprite.svg#icon-arrow-long-down"></use>
             </svg>
           </a>
-        <p class="button-square__text button-square__text--header">zobacz czym się zajmuję</p>
+        <p id="button-exp" class="button-square__text button-square__text--header">zobacz czym się zajmuję</p>
       </div>
     </div>
     <div class="banner__background"></div>
@@ -543,8 +544,9 @@
       </svg></span> by Grymulka 2019</p>
 
     <div class="button-square button-square__footer">
-      <p class="button-square__text">back to top</p>
-      <a href="#head" class="button-square__shape button-square__shape--footer">
+      <p id="button-top" class="button-square__text">back to top</p>
+      <a href="#head" class="button-square__shape button-square__shape--footer"
+         aria-labelledby="button-top">
           <svg class="button-square__arrow">
             <use xlink:href="assets/icons/sprite.svg#icon-arrow-long-up"></use>
           </svg>
