@@ -1,0 +1,202 @@
+//główne style nawigacji - dajemy na samej górze nad bannerem
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 16vh;
+  margin: 0 auto;
+  z-index: 100;
+  background-color: transparent;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  transition: 1s;
+
+  @media (orientation: portrait) and (max-width: $bp-medium-grid) {
+    height: 8vh;
+  }
+}
+
+//dodatkowe klasy, aby Hamburger znikał gdy scrolujemy w dół i pojawiał się gdy scroll do góry
+.scroll-down .nav {
+  transform: translateY(-110%);
+}
+.scroll-up .nav {
+  transform: none;
+}
+
+//Hamburger Menu - style do buttona
+.btn-menu {
+  background-color: transparent;
+  width: 6rem;
+  height: 6rem;
+  margin-right: 3rem;
+  padding-left: 1rem;
+  border: none;
+  outline: none;
+  z-index: 200;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media only screen and (max-width: $bp-medium-grid) {
+    margin-right: 2rem;
+  }
+
+  &:focus {
+    border: var(1px solid transparent);
+  }
+  &__label {
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  &__burger {
+    position: relative;
+    transition-timing-function: ease-in;
+  }
+
+  &__burger,
+  &__burger::before,
+  &__burger::after {
+    display: inline-block;
+    width: 3rem;
+    height: 0.33rem;
+    background-color: var(--color-grey-dark);
+    border-radius: 3px;
+    transition: 0.3s;
+  }
+  &__burger::before,
+  &__burger::after {
+    content: "";
+    position: absolute;
+    right: 0;
+  }
+  &__burger::before {
+    width: 4rem;
+    transform: translateY(-1rem);
+  }
+  &__burger::after {
+    width: 2rem;
+    transform: translateY(1rem);
+  }
+}
+
+//zmiana widoku hamburger po przescrollowaniu w doł
+.btn-menu_scrolled {
+  background-color: #fff;
+  border: var(--line);
+  border-radius: 3px;
+  box-shadow: var(--shadow-button-active);
+}
+.btn-menu_scrolled .btn-menu__burger,
+.btn-menu_scrolled .btn-menu__burger::before,
+.btn-menu_scrolled .btn-menu__burger::after {
+  background-color: var(--color-primary);
+}
+
+//zmiana hamburgera na krzyżyk po kliknięciu
+.btn-menu_open .btn-menu__burger {
+  transform: translateX(-10rem);
+  background-color: transparent;
+}
+.btn-menu_open .btn-menu__burger::before {
+  transform: rotate(45deg) translate(7.2rem, -7.2rem);
+}
+.btn-menu_open .btn-menu__burger::after {
+  width: 4rem;
+  transform: rotate(-45deg) translate(7.2rem, 7.2rem);
+}
+
+.nav {
+  //widok menu gdy nieaktywne
+  &__menu {
+    position: absolute;
+    top: -110vh;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    transition: 1s;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+
+    box-shadow: var(--shadow-box-big);
+    background-color: var(--color-grey-light);
+  }
+  //widok menu po kliknięciu Hamburgera
+  &__menu_open {
+    top: 0;
+  }
+
+  &__person {
+    flex-basis: 80%;
+    margin-bottom: 3rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__person-photo {
+    width: 11rem;
+    clip-path: circle();
+    margin-right: 2rem;
+  }
+
+  &__person-text {
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    font-family: var(--font-headings);
+    font-weight: bold;
+    letter-spacing: 0.5px;
+
+    &--1 {
+      font-size: 1.5rem;
+      margin-top: 0.5rem;
+      color: var(--color-secondary);
+    }
+  }
+
+  &__navigation {
+    list-style: none;
+  }
+}
+
+.scroll-down .nav__menu_open {
+  //transform: translateY(5vh);
+  padding-top: 12rem;
+
+  @media only screen and (max-width: $bp-medium-grid) {
+    //transform: translateY(8vh);
+    padding-top: 6rem;
+  }
+}
+
+//style do linków w menu
+.navigation {
+  &__item {
+    padding: 1rem 0;
+  }
+  &__link:visited,
+  &__link:link {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--color-grey-dark);
+    font-size: 2rem;
+    // padding-bottom: 5px;
+    // border-bottom: 1px solid var(--color-primary);
+  }
+}
