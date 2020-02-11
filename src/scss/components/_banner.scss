@@ -121,6 +121,9 @@
     transform: translateY(-3px);
     box-shadow: 0 8px 1rem rgba(black, 0.2);
   }
+  &__icon:hover &__svg {
+    fill: white;
+  }
   &__icon:active {
     transform: translateY(-1px);
     box-shadow: 0 3px 1rem rgba(black, 0.2);
@@ -130,10 +133,6 @@
     fill: var(--color-primary);
     width: 2.8rem;
     height: 2.8rem;
-
-    &:hover {
-      fill: white;
-    }
   }
 
   &__background {

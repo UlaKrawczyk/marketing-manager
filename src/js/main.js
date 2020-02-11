@@ -5,6 +5,7 @@ const banner = document.querySelector(".banner");
 const nav = document.querySelector(".nav");
 const navHamburger = document.querySelector(".nav__hamburger");
 const navMenu = document.querySelector(".nav__menu");
+let navLinks = document.querySelectorAll(".navigation__link");
 const scrollUp = "scroll-up";
 const scrollDown = "scroll-down";
 let bannerWidth;
@@ -41,15 +42,6 @@ window.addEventListener("scroll", () => {
   lastScroll = currentScroll;
 });
 
-//nawigacja - hamburger menu
-navHamburger.addEventListener('click', function () {
-  const isOpened = navHamburger.getAttribute('aria-expanded') === 'true';
-
-  navHamburger.classList.toggle('btn-menu_open', !isOpened);
-  navHamburger.setAttribute('aria-expanded', String(!isOpened));
-  navMenu.classList.toggle('nav__menu_open', !isOpened);
-});
-
 //zmiana wyglądu hamburgera po lekkim zescrollowaniu w dół
 function changeHamburger() {
   const mq835 = window.matchMedia('(max-width: 835px)');
@@ -64,3 +56,21 @@ function changeHamburger() {
   }
 }
 window.addEventListener("scroll", changeHamburger);
+
+//nawigacja - hamburger menu zmiana na krzyżyk i rozwijanie menu
+navHamburger.addEventListener('click', function () {
+  const isOpened = navHamburger.getAttribute('aria-expanded') === 'true';
+
+  navHamburger.classList.toggle('btn-menu_open', !isOpened);
+  navHamburger.setAttribute('aria-expanded', String(!isOpened));
+  navMenu.classList.toggle('nav__menu_open', !isOpened);
+});
+
+//zamyka menu po kliknięciu w jeden z linków
+for (let i = 0; i < navLinks.length; i++) {
+  navLinks[i].addEventListener('click', function () {
+    navMenu.classList.toggle('nav__menu_open');
+    navHamburger.classList.toggle('btn-menu_open');
+    navHamburger.setAttribute('aria-expanded', 'false');
+  });
+}
