@@ -153,7 +153,8 @@
   &__person-photo {
     width: 11rem;
     clip-path: circle();
-    margin-right: 2rem;
+    margin-left: 2rem;
+    order: 2;
 
     @media only screen and (max-width: $bp-smallest) {
       width: 10rem;
@@ -181,8 +182,6 @@
     &--1 {
       font-size: 1.5rem;
       margin-top: 0.2rem;
-      // border-bottom: 2px solid var(--color-primary);
-      // padding-bottom: 1rem;
 
       @media only screen and (max-width: $bp-smallest) {
         font-size: 1.4rem;
@@ -212,14 +211,36 @@
 //style do linków w menu
 .navigation {
   &__item {
-    padding: 1rem 0;
+    position: relative;
+    padding: 1.5rem 1rem;
   }
+
+  &__item::before {
+    content: "";
+    position: absolute;
+    top: 10%;
+    left: 0;
+    height: 80%;
+    width: 4px;
+    background-color: var(--color-secondary);
+    transform: scaleY(0);
+    transition: transform 0.3s ease-out;
+  }
+
+  &__item:hover::before {
+    transform: scaleY(1);
+  }
+
+  &__link,
   &__link:visited,
   &__link:link {
     text-decoration: none;
     text-transform: uppercase;
     color: var(--color-grey-dark);
     font-size: 2rem;
+    display: flex;
+    align-items: center;
+    transition: 0.3s;
 
     @media only screen and (max-width: $bp-smallest) {
       font-size: 1.8rem;
@@ -227,5 +248,50 @@
     @media only screen and (max-width: $bp-tiny) {
       font-size: 1.6rem;
     }
+  }
+  &__link:hover {
+    color: var(--color-secondary);
+  }
+
+  //ikony do nawigacji
+  &__link::before {
+    content: "";
+    display: inline-block;
+    width: 4rem;
+    height: 2.5rem;
+    margin-right: 2rem;
+    background-image: url(../assets/icons/nav/aboutIN.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 5;
+
+    @media only screen and (max-width: $bp-smallest) {
+      width: 3.4rem;
+      height: 2rem;
+    }
+    @media only screen and (max-width: $bp-tiny) {
+      width: 3rem;
+      height: 1.8rem;
+    }
+  }
+
+  &__item:nth-child(2) &__link::before {
+    background-image: url(../assets/icons/nav/skills2IN.svg);
+  }
+  &__item:nth-child(3) &__link::before {
+    background-image: url(../assets/icons/nav/expIN.svg);
+  }
+  &__item:nth-child(4) &__link::before {
+    background-image: url(../assets/icons/nav/eduIN.svg);
+  }
+  &__item:nth-child(5) &__link::before {
+    background-image: url(../assets/icons/nav/projects2IN.svg);
+  }
+  &__item:nth-child(6) &__link::before {
+    background-image: url(../assets/icons/nav/hobbyIN.svg);
+  }
+  &__item:nth-child(7) &__link::before {
+    background-image: url(../assets/icons/nav/contactIN.svg);
   }
 }
