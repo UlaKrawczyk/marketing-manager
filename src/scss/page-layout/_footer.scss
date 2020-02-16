@@ -7,16 +7,16 @@
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 0.8rem;
   }
+}
 
-  &__title {
-    font-family: var(--font-Grymulka);
-    font-size: 2rem;
-    text-transform: uppercase;
-  }
+.author__title {
+  font-family: var(--font-Grymulka);
+  font-size: 2rem;
+  text-transform: uppercase;
+}
 
-  &__svg {
-    width: 1.7rem;
-    height: 1.7rem;
-    fill: var(--color-primary);
-  }
+.author__svg {
+  width: 1.7rem;
+  height: 1.7rem;
+  fill: var(--color-primary);
 }

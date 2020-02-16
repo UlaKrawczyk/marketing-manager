@@ -1,6 +1,30 @@
+.header-task-page {
+  width: 100%;
+  height: 75vh;
+  background-image: url(../assets/img/header-foto-small.jpg);
+  background-size: cover;
+  background-position: top center;
+
+  @media only screen and (min-resolution: 192dpi) and (min-width: 600px),
+    only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 600px),
+    only screen and (min-width: 1200px) {
+    background-image: url(../assets/img/header-foto-medium.jpg);
+  }
+  @media only screen and (min-resolution: 192dpi) and (min-width: 1000px),
+    only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1000px),
+    only screen and (min-width: 2000px) {
+    background-image: url(../assets/img/header-foto-big.jpg);
+  }
+}
+
 .task-page {
-  grid-column: center-start / center-end;
-  grid-row: 2 / 4;
+  position: absolute;
+  top: 12vh;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80vw;
+  min-height: 72vh;
+
   background-color: var(--color-grey-light);
   box-shadow: var(--shadow-box-big);
 
@@ -47,7 +71,7 @@
 }
 
 .task {
-  padding-bottom: 5rem;
+  padding-bottom: 2rem;
 
   &__line {
     display: flex;
@@ -81,4 +105,15 @@
   grid-row: 3 / 4;
   padding: 1rem 0 2rem 0;
   font-size: 2rem;
+}
+
+.footer-task-page {
+  margin: 0 auto;
+  padding-bottom: 3rem;
+  width: 80vw;
+  height: 25vh;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
 }

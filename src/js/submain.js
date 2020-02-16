@@ -21,5 +21,31 @@ function startSlide() {
   sliderFooters[0].style.display = 'block';
 }
 
-console.log('wreszcie działa!!!')
+function slideLeft() {
+  reset();
+  sliderTasks[current - 1].style.display = "block";
+  sliderFooters[current - 1].style.display = "block";
+  current--;
+}
+
+function slideRight() {
+  reset();
+  sliderTasks[current + 1].style.display = "block";
+  sliderFooters[current + 1].style.display = "block";
+  current++;
+}
+
+arrowLeft.addEventListener('click', function () {
+  if (current === 0) {
+    current = sliderTasks.length;
+  }
+  slideLeft();
+});
+arrowRight.addEventListener('click', function () {
+  if (current === sliderTasks.length - 1) {
+    current = -1;
+  }
+  slideRight();
+});
+
 startSlide();
