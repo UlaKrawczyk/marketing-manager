@@ -112,6 +112,10 @@
   font-size: 2rem;
   font-weight: 500;
 
+  @media only screen and (max-width: $bp-largest) {
+    font-size: 1.7rem;
+  }
+
   &--uppercase {
     text-transform: uppercase;
   }
@@ -125,9 +129,14 @@
     margin-left: 3.5rem;
     margin-top: 3rem;
     margin-bottom: 1.5rem;
-  }
 
-  @media only screen and (max-width: $bp-largest) {
-    font-size: 1.7rem;
+    @media only screen and (max-width: $bp-tiny-big) {
+      font-size: 1.4rem;
+    }
+    @media only screen and (max-width: $bp-mini) {
+      margin-left: 1rem;
+      margin-top: 1rem;
+      margin-bottom: 0.5rem;
+    }
   }
 }

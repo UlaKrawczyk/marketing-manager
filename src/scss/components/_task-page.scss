@@ -31,22 +31,48 @@
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: min-content 1fr min-content;
+
+  @media only screen and (orientation: portrait) {
+    min-height: 80vh;
+  }
+
+  @media only screen and (max-width: $bp-smallest) {
+    top: 5vh;
+    width: 90%;
+    padding: 0 3rem;
+  }
+  @media only screen and (max-width: $bp-mini) {
+    top: 3vh;
+    padding: 0 1rem;
+  }
 }
 
 .task-header {
   grid-column: 2 / 10;
   padding-top: 5rem;
-  padding-left: 3rem;
+  padding-left: 3.5rem;
+
+  @media only screen and (max-width: $bp-tiny-big) {
+    padding-top: 3rem;
+    padding-left: 1rem;
+    grid-column: 1 / 11;
+  }
 }
 
 #arrow-left {
   grid-column: 10 / 11;
   justify-self: end;
+  @media only screen and (max-width: $bp-tiny-big) {
+    grid-column: 11 / 12;
+  }
 }
 #arrow-right {
   grid-column: 11 / 12;
   justify-self: start;
   margin-left: 1rem;
+  @media only screen and (max-width: $bp-tiny-big) {
+    grid-column: 12 / 13;
+  }
 }
 .task-arrow {
   margin-top: 5rem;
@@ -54,24 +80,66 @@
   height: 4rem;
   border: 1px solid var(--color-grey-dark);
   border-radius: 2px;
+  transition: 0.3s;
+  cursor: pointer;
 
   display: flex;
   justify-content: center;
   align-items: center;
 
+  @media only screen and (max-width: $bp-tiny-big) {
+    width: 3rem;
+    height: 3rem;
+    margin-top: 3rem;
+  }
+
   &__svg {
     width: 2.5rem;
     height: 2.5rem;
     fill: var(--color-grey-dark);
+    @media only screen and (max-width: $bp-tiny-big) {
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+
+  &:hover {
+    border: 1px solid var(--color-primary);
+  }
+  &:hover &__svg {
+    fill: var(--color-primary);
+  }
+  &:hover &__svg--right {
+    animation: pulsateRight 1.5s ease-in-out infinite;
+  }
+  &:hover &__svg--left {
+    animation: pulsateLeft 1.5s ease-in-out infinite;
   }
 }
 
 .task-main {
   grid-column: 2 / 12;
+
+  @media only screen and (max-width: $bp-tiny-big) {
+    grid-column: 1 / 13;
+  }
 }
 
 .task {
   padding-bottom: 2rem;
+
+  @media only screen and (max-width: $bp-tiny-big) {
+    padding-bottom: 0.5rem;
+  }
+
+  &__content {
+    column-count: 2;
+    column-gap: 3rem;
+
+    @media only screen and (max-width: $bp-large-mobile) {
+      column-count: 1;
+    }
+  }
 
   &__line {
     display: flex;
@@ -79,11 +147,8 @@
     justify-content: flex-start;
     margin-top: 1rem;
 
-    @media only screen and (max-width: $bp-medium-grid) {
-      margin-top: 1rem;
-    }
     @media only screen and (max-width: $bp-smallest) {
-      margin-top: 0.8rem;
+      margin-top: 0.6rem;
     }
   }
 
@@ -93,10 +158,18 @@
     height: 3rem;
     margin-right: 1.5rem;
     flex: 0 0 2rem;
+
+    @media only screen and (max-width: $bp-tiny-big) {
+      margin-right: 1rem;
+    }
   }
 
   &__text {
     flex: 1;
+
+    @media only screen and (max-width: $bp-tiny-big) {
+      font-size: 1.4rem;
+    }
   }
 }
 
@@ -105,6 +178,11 @@
   grid-row: 3 / 4;
   padding: 1rem 0 2rem 0;
   font-size: 2rem;
+
+  @media only screen and (max-width: $bp-tiny-big) {
+    font-size: 1.2rem;
+    padding: 0.5rem 0 1rem 0;
+  }
 }
 
 .footer-task-page {
@@ -116,4 +194,8 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+
+  @media only screen and (max-width: $bp-smallest) {
+    width: 90vw;
+  }
 }

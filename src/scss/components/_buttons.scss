@@ -1,3 +1,4 @@
+//button square with animated arrow in header (down) in footer (up) in subpages (left)
 .button-square {
   display: flex;
   justify-content: flex-start;
@@ -34,7 +35,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    // margin-right: 1rem;
+
     transition: 0.5s;
     cursor: pointer;
   }
@@ -60,6 +61,9 @@
   &__shape:hover &__arrow {
     animation: pulsate 1.5s ease-in-out infinite;
   }
+  &__shape:hover &__arrow--task-page {
+    animation: pulsateLeft 1.5s ease-in-out infinite;
+  }
 
   &__arrow {
     fill: white;
@@ -74,9 +78,15 @@
     &--header {
       margin-left: 1.2rem;
     }
+    &--task-page {
+      text-align: right;
+      margin-right: 1rem;
+      margin-left: 0.5rem;
+    }
   }
 }
 
+//button pobierz moje cv
 .button-rectangle {
   position: relative;
   width: 18.2rem;
@@ -125,6 +135,7 @@
   }
 }
 
+//button zobacz moje zadania
 .button-experience:link,
 .button-experience:visited {
   display: inline-block;

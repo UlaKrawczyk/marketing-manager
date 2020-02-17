@@ -18,3 +18,45 @@
     transform: translateY(0px);
   }
 }
+
+@keyframes pulsateRight {
+  0% {
+    transform: translateX(0px);
+  }
+  20% {
+    transform: translateX(0px);
+  }
+  45% {
+    transform: translateX(3px);
+  }
+  55% {
+    transform: translateX(3px);
+  }
+  70% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes pulsateLeft {
+  0% {
+    transform: translateX(0px);
+  }
+  20% {
+    transform: translateX(0px);
+  }
+  45% {
+    transform: translateX(-3px);
+  }
+  55% {
+    transform: translateX(-3px);
+  }
+  70% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
