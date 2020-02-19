@@ -1857,6 +1857,9 @@ template {
   background-position: center;
   -webkit-filter: blur(1px);
           filter: blur(1px); }
+  @media only screen and (hover: none) {
+    .skills-slide-background {
+      background-attachment: initial; } }
   @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 600px), only screen and (-o-min-device-pixel-ratio: 2/1) and (min-width: 600px), only screen and (min-resolution: 192dpi) and (min-width: 600px), only screen and (min-width: 1200px) {
     .skills-slide-background {
       background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(90, 88, 85, 0.45)), to(rgba(255, 255, 255, 0.35))), url(../assets/img/about-3-medium.jpg);
