@@ -13,9 +13,6 @@
     grid-template-columns: 1fr;
   }
 
-  &__content {
-  }
-
   &__line {
     display: flex;
     align-items: center;
@@ -39,6 +36,12 @@
     margin-right: 2rem;
     padding: 0.5rem;
     fill: var(--color-primary);
+  }
+
+  &__link:link,
+  &__link:visited {
+    text-decoration: none;
+    color: currentColor;
   }
 
   &__form {
