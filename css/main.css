@@ -119,9 +119,9 @@
             transform: translateX(0px); } }
 
 :root {
-  --color-primary: #d1a46f;
+  --color-primary: rgb(209, 164, 111);
   --color-secondary: rgb(17, 43, 158);
-  --color-grey-dark: rgb(68, 70, 85);
+  --color-grey-dark: #444655;
   --color-grey-light: #f4f4f4;
   --font-primary: "Raleway", sans-serif;
   --font-headings: "Shadows Into Light Two", cursive;
@@ -1253,6 +1253,8 @@ template {
         -webkit-column-count: 1;
            -moz-column-count: 1;
                 column-count: 1; } }
+    .task__content--withoutHeading {
+      margin-top: 4rem; }
   .task__line {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1295,9 +1297,11 @@ template {
   grid-row: 3 / 4;
   padding: 1rem 0 2rem 0;
   font-size: 2rem; }
+  @media only screen and (max-width: 30.94em) {
+    .task-footer {
+      font-size: 1.2rem; } }
   @media only screen and (max-width: 26em) {
     .task-footer {
-      font-size: 1.2rem;
       padding: 0.5rem 0 1rem 0; } }
 
 .footer-task-page {
