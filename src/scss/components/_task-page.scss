@@ -139,6 +139,10 @@
     @media only screen and (max-width: $bp-large-mobile) {
       column-count: 1;
     }
+
+    &--withoutHeading {
+      margin-top: 4rem;
+    }
   }
 
   &__line {
@@ -179,8 +183,10 @@
   padding: 1rem 0 2rem 0;
   font-size: 2rem;
 
-  @media only screen and (max-width: $bp-tiny-big) {
+  @media only screen and (max-width: $bp-smallest) {
     font-size: 1.2rem;
+  }
+  @media only screen and (max-width: $bp-tiny-big) {
     padding: 0.5rem 0 1rem 0;
   }
 }

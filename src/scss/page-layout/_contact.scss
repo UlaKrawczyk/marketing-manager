@@ -38,10 +38,11 @@
     fill: var(--color-primary);
   }
 
+  &__link,
   &__link:link,
   &__link:visited {
     text-decoration: none;
-    color: currentColor;
+    color: var(--color-grey-dark);
   }
 
   &__form {
