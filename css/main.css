@@ -1414,6 +1414,9 @@ template {
     margin-right: 2rem;
     padding: 0.5rem;
     fill: var(--color-primary); }
+  .contact__link:link, .contact__link:visited {
+    text-decoration: none;
+    color: currentColor; }
   .contact__form {
     margin: 1rem 3rem 0 12rem;
     padding: 3rem;
