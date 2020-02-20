@@ -128,3 +128,20 @@
     }
   }
 }
+
+#pixel-anchor {
+  width: 1px;
+  height: 1px;
+  color: white;
+  position: absolute;
+  left: 0;
+  top: 1300px;
+}
+
+.slide--js {
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+}
+.slide--js.slide-emerge {
+  opacity: 1;
+}

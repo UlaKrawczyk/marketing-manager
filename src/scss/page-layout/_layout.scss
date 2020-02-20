@@ -94,6 +94,7 @@
 }
 
 .skills-slide-background {
+  position: relative;
   grid-column: left-start / right-end;
   grid-row: 6 / 7;
   background-image: linear-gradient(to bottom, rgba(#5a5855, 0.45), rgba(white, 0.35)),

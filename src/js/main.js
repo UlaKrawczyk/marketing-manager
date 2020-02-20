@@ -74,3 +74,21 @@ for (let i = 0; i < navLinks.length; i++) {
     navHamburger.setAttribute('aria-expanded', 'false');
   });
 }
+
+//animation on scroll - skills-slide sections - only the first
+const slide = document.querySelector(".slide--js");
+
+if (
+  "IntersectionObserver" in window &&
+  "IntersectionObserverEntry" in window &&
+  "intersectionRatio" in window.IntersectionObserverEntry.prototype
+) {
+  let observer = new IntersectionObserver(entries => {
+    if (entries[0].boundingClientRect.y < 0) {
+      slide.classList.add("slide-emerge");
+    } else {
+      slide.classList.remove("slide-emerge");
+    }
+  });
+  observer.observe(document.querySelector("#pixel-anchor"));
+}
