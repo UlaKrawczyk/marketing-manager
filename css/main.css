@@ -1844,6 +1844,7 @@ template {
       margin-top: 5rem; } }
 
 .skills-slide-background {
+  position: relative;
   grid-column: left-start / right-end;
   -ms-grid-row: 6;
   -ms-grid-row-span: 1;
@@ -2821,5 +2822,22 @@ template {
     @media only screen and (max-width: 23.44em) {
       .slide__skill {
         font-size: 1.7rem; } }
+
+#pixel-anchor {
+  width: 1px;
+  height: 1px;
+  color: white;
+  position: absolute;
+  left: 0;
+  top: 1300px; }
+
+.slide--js {
+  opacity: 0;
+  -webkit-transition: opacity 2s ease-in-out;
+  -o-transition: opacity 2s ease-in-out;
+  transition: opacity 2s ease-in-out; }
+
+.slide--js.slide-emerge {
+  opacity: 1; }
 
 /*# sourceMappingURL=main.css.map */
