@@ -702,7 +702,9 @@ template {
       margin-right: 1rem;
       margin-left: 0.5rem; }
 
-.button-rectangle {
+.button-rectangle,
+.button-rectangle:link,
+.button-rectangle:visited {
   position: relative;
   width: 18.2rem;
   height: 4.2rem;
@@ -717,11 +719,15 @@ template {
   -webkit-box-shadow: var(--shadow-button);
           box-shadow: var(--shadow-button);
   overflow: hidden;
+  text-decoration: none;
+  text-align: center;
   cursor: pointer;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s; }
-  .button-rectangle .span-bg {
+  .button-rectangle .span-bg,
+  .button-rectangle:link .span-bg,
+  .button-rectangle:visited .span-bg {
     width: 110%;
     height: 110%;
     position: absolute;
@@ -731,7 +737,9 @@ template {
     -webkit-transition: 0.5s;
     -o-transition: 0.5s;
     transition: 0.5s; }
-  .button-rectangle .span-text {
+  .button-rectangle .span-text,
+  .button-rectangle:link .span-text,
+  .button-rectangle:visited .span-text {
     width: 100%;
     position: absolute;
     top: 50%;
@@ -740,15 +748,21 @@ template {
         -ms-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
     z-index: 2; }
-  .button-rectangle:hover {
+  .button-rectangle:hover,
+  .button-rectangle:link:hover,
+  .button-rectangle:visited:hover {
     color: var(--color-grey-dark);
     border-color: var(--color-grey-dark); }
-  .button-rectangle:hover .span-bg {
+  .button-rectangle:hover .span-bg,
+  .button-rectangle:link:hover .span-bg,
+  .button-rectangle:visited:hover .span-bg {
     -webkit-transform: translateY(-100%);
         -ms-transform: translateY(-100%);
             transform: translateY(-100%); }
-  .button-rectangle:focus {
-    outline: none; }
+  .button-rectangle:active,
+  .button-rectangle:link:active,
+  .button-rectangle:visited:active {
+    border-color: var(--color-primary); }
 
 .button-experience:link,
 .button-experience:visited {
