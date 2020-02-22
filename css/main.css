@@ -2054,7 +2054,7 @@ template {
     .btn-menu {
       margin-right: 2rem; } }
   .btn-menu:focus {
-    border: var(1px solid transparent); }
+    border: 1px solid var(--color-primary); }
   .btn-menu__label {
     width: 1px;
     height: 1px;
