@@ -47,7 +47,7 @@
   }
 
   &:focus {
-    border: var(1px solid transparent);
+    border: 1px solid var(--color-primary);
   }
   &__label {
     width: 1px;
