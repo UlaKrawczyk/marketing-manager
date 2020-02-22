@@ -1,6 +1,6 @@
 "use strict";
 
-//slider w podstronach z zadaniami
+//slider on subpages with tasks lists
 
 const arrowLeft = document.querySelector('#arrow-left');
 const arrowRight = document.querySelector('#arrow-right');

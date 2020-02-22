@@ -11,7 +11,7 @@ const scrollDown = "scroll-down";
 let bannerWidth;
 let lastScroll = 0;
 
-//szerokość nawigacji
+//navigation width
 function setNavWidth() {
   bannerWidth = banner.offsetWidth;
   nav.style.width = bannerWidth + "px";
@@ -42,7 +42,7 @@ window.addEventListener("scroll", () => {
   lastScroll = currentScroll;
 });
 
-//zmiana wyglądu hamburgera po lekkim zescrollowaniu w dół
+//look of hamburger menu after slightly scrolling down
 function changeHamburger() {
   const mq835 = window.matchMedia('(max-width: 835px)');
   const scrolledDown = window.pageYOffset;
@@ -57,7 +57,7 @@ function changeHamburger() {
 }
 window.addEventListener("scroll", changeHamburger);
 
-//nawigacja - hamburger menu zmiana na krzyżyk i rozwijanie menu
+//navigation - hamburger menu changes on cross and menu appears
 navHamburger.addEventListener('click', function () {
   const isOpened = navHamburger.getAttribute('aria-expanded') === 'true';
 
@@ -66,7 +66,7 @@ navHamburger.addEventListener('click', function () {
   navMenu.classList.toggle('nav__menu_open', !isOpened);
 });
 
-//zamyka menu po kliknięciu w jeden z linków
+//menu closes after clicking one of the links
 for (let i = 0; i < navLinks.length; i++) {
   navLinks[i].addEventListener('click', function () {
     navMenu.classList.toggle('nav__menu_open');

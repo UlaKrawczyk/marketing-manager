@@ -1,4 +1,4 @@
-//główne style nawigacji - dajemy na samej górze nad bannerem
+//navigation - main styling
 .nav {
   position: fixed;
   top: 0;
@@ -19,7 +19,7 @@
   }
 }
 
-//dodatkowe klasy, aby Hamburger znikał gdy scrolujemy w dół i pojawiał się gdy scroll do góry
+//additional classes to make Hamburger disappear when scrolling down and reappear when scrolling up
 .scroll-down .nav {
   transform: translateY(-110%);
 }
@@ -27,7 +27,7 @@
   transform: none;
 }
 
-//Hamburger Menu - style do buttona
+//Hamburger Menu - button styling
 .btn-menu {
   background-color: transparent;
   width: 6rem;
@@ -37,6 +37,7 @@
   border: none;
   outline: none;
   z-index: 200;
+  cursor: pointer;
 
   display: flex;
   justify-content: center;
@@ -92,7 +93,7 @@
   }
 }
 
-//zmiana widoku hamburger po przescrollowaniu w doł
+//Hamburger look changing when scrolling down
 .btn-menu_scrolled {
   background-color: #fff;
   border: var(--line);
@@ -105,7 +106,7 @@
   background-color: var(--color-primary);
 }
 
-//zmiana hamburgera na krzyżyk po kliknięciu
+//Hamburger 3 lines changing on cross when clicked
 .btn-menu_open .btn-menu__burger {
   transform: translateX(-10rem);
   background-color: transparent;
@@ -119,7 +120,7 @@
 }
 
 .nav {
-  //widok menu gdy nieaktywne
+  //menu behaviour when in inactive state
   &__menu {
     position: absolute;
     top: -110vh;
@@ -136,7 +137,7 @@
     box-shadow: var(--shadow-box-big);
     background-color: var(--color-grey-light);
   }
-  //widok menu po kliknięciu Hamburgera
+  //menu behaviour when Hamburger Menu is clicked
   &__menu_open {
     top: 0;
   }
@@ -199,7 +200,7 @@
     list-style: none;
   }
 }
-//gdy scrollujemy na dół z aktywną nawigacją, to poprawia wyśrodkowanie w pionie
+//when scrolling down with open navigation menu - fixes centering elements vertically
 .scroll-down .nav__menu_open {
   padding-top: 12rem;
 
@@ -208,7 +209,7 @@
   }
 }
 
-//style do linków w menu
+//navigation - links in menu
 .navigation {
   &__item {
     position: relative;
@@ -253,7 +254,7 @@
     color: var(--color-secondary);
   }
 
-  //ikony do nawigacji
+  //navigation - icons
   &__link::before {
     content: "";
     display: inline-block;

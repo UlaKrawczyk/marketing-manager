@@ -86,8 +86,10 @@
   }
 }
 
-//button pobierz moje cv
-.button-rectangle {
+//link "pobierz moje cv" - download my cv
+.button-rectangle,
+.button-rectangle:link,
+.button-rectangle:visited {
   position: relative;
   width: 18.2rem;
   height: 4.2rem;
@@ -101,6 +103,9 @@
   border: var(--line);
   box-shadow: var(--shadow-button);
   overflow: hidden;
+  text-decoration: none;
+  text-align: center;
+
   cursor: pointer;
   transition: 0.5s;
 
@@ -130,12 +135,12 @@
     transform: translateY(-100%);
   }
 
-  &:focus {
-    outline: none;
+  &:active {
+    border-color: var(--color-primary);
   }
 }
 
-//button zobacz moje zadania
+//button "zobacz moje zadania" - see my tasks
 .button-experience:link,
 .button-experience:visited {
   display: inline-block;
