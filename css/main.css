@@ -126,9 +126,9 @@
   --font-primary: "Raleway", sans-serif;
   --font-headings: "Shadows Into Light Two", cursive;
   --font-Grymulka: "Megrim", cursive;
-  --shadow-box-big: 0 2rem 2.5rem rgba(68, 70, 85, 0.33);
-  --shadow-box-round: 0 0 3rem rgba(68, 70, 85, 0.35);
-  --shadow-icon: 0 0.7rem 0.5rem rgba(68, 70, 85, 0.9);
+  --shadow-box-big: 0 1.5rem 2.2rem rgba(68, 70, 85, 0.3);
+  --shadow-box-round: 0 0 2rem rgba(68, 70, 85, 0.2);
+  --shadow-icon: 0 0.4rem 0.5rem rgba(68, 70, 85, 0.9);
   --shadow-button: 0 1rem 2rem rgba(68, 70, 85, 0.15);
   --shadow-button-active: 0 0.5rem 1rem rgba(68, 70, 85, 0.15);
   --line: 1px solid var(--color-primary); }
@@ -2718,8 +2718,8 @@ template {
       grid-template-columns: 1fr 64%; } }
   .slide__icon {
     fill: var(--color-grey-light);
-    width: 9rem;
-    height: 12rem;
+    width: 8rem;
+    height: 10rem;
     margin-bottom: 1.5rem;
     -webkit-filter: drop-shadow(var(--shadow-icon));
             filter: drop-shadow(var(--shadow-icon));
@@ -2738,7 +2738,7 @@ template {
         width: 7rem;
         height: 10rem; } }
     .slide__icon--bubbles {
-      width: 9.7rem; }
+      width: 8.7rem; }
       @media only screen and (max-width: 41.25em) {
         .slide__icon--bubbles {
           -ms-grid-column: 1;
@@ -2754,7 +2754,7 @@ template {
         .slide__icon--bubbles {
           width: 7.7rem; } }
     .slide__icon--sphere {
-      width: 9.5rem; }
+      width: 8.5rem; }
       @media only screen and (max-width: 30.94em) {
         .slide__icon--sphere {
           width: 8.5rem; } }
@@ -2762,7 +2762,7 @@ template {
         .slide__icon--sphere {
           width: 7.5rem; } }
     .slide__icon--computer {
-      width: 11rem; }
+      width: 10rem; }
       @media only screen and (max-width: 41.25em) {
         .slide__icon--computer {
           -ms-grid-column: 1;
@@ -2787,7 +2787,7 @@ template {
         -ms-grid-row-span: 1;
         grid-row: 3 / 4; } }
     .slide__icon--users {
-      width: 9.5rem; }
+      width: 8.5rem; }
       @media only screen and (max-width: 41.25em) {
         .slide__icon--users {
           -ms-grid-column: 1;
@@ -2823,17 +2823,16 @@ template {
         -ms-grid-column-align: start;
             justify-self: start; } }
   .slide__skill {
-    font-size: 2.1rem;
+    font-size: 2rem;
     font-weight: 500;
     text-transform: uppercase;
-    color: var(--color-grey-light);
-    text-shadow: var(--shadow-icon); }
+    color: var(--color-grey-light); }
     @media only screen and (max-width: 52.2em) {
       .slide__skill {
-        font-size: 2rem; } }
+        font-size: 1.9rem; } }
     @media only screen and (max-width: 30.94em) {
       .slide__skill {
-        font-size: 1.8rem; } }
+        font-size: 1.7rem; } }
     @media only screen and (max-width: 23.44em) {
       .slide__skill {
         font-size: 1.7rem; } }
