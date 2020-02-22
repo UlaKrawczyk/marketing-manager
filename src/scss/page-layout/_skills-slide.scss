@@ -18,8 +18,8 @@
 
   &__icon {
     fill: var(--color-grey-light);
-    width: 9rem;
-    height: 12rem;
+    width: 8rem;
+    height: 10rem;
     margin-bottom: 1.5rem;
     filter: drop-shadow(var(--shadow-icon));
     align-self: center;
@@ -37,7 +37,7 @@
     }
 
     &--bubbles {
-      width: 9.7rem;
+      width: 8.7rem;
       @media only screen and (max-width: $bp-small) {
         grid-column: 1 / 2;
         grid-row: 1 / 2;
@@ -50,7 +50,7 @@
       }
     }
     &--sphere {
-      width: 9.5rem;
+      width: 8.5rem;
       @media only screen and (max-width: $bp-smallest) {
         width: 8.5rem;
       }
@@ -59,7 +59,7 @@
       }
     }
     &--computer {
-      width: 11rem;
+      width: 10rem;
       @media only screen and (max-width: $bp-small) {
         grid-column: 1 / 2;
         grid-row: 2 / 3;
@@ -79,7 +79,7 @@
       }
     }
     &--users {
-      width: 9.5rem;
+      width: 8.5rem;
       @media only screen and (max-width: $bp-small) {
         grid-column: 1 / 2;
         grid-row: 3 / 4;
@@ -111,17 +111,17 @@
   }
 
   &__skill {
-    font-size: 2.1rem;
+    font-size: 2rem;
     font-weight: 500;
     text-transform: uppercase;
     color: var(--color-grey-light);
-    text-shadow: var(--shadow-icon);
+    //text-shadow: var(--shadow-icon);
 
     @media only screen and (max-width: $bp-medium-grid) {
-      font-size: 2rem;
+      font-size: 1.9rem;
     }
     @media only screen and (max-width: $bp-smallest) {
-      font-size: 1.8rem;
+      font-size: 1.7rem;
     }
     @media only screen and (max-width: $bp-tiny) {
       font-size: 1.7rem;

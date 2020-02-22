@@ -12,7 +12,7 @@
 * sass
 * adding svg icons and using sprite.svg
 * project is build on a starter-kit by Maciej Korsan
-* graphic design inpired by http://www.themeperch.net/ and modified in figma
+* graphic design inspired by http://www.themeperch.net/ and modified in figma
 
 ![my webpage elements](github/manager-page-2.jpg)
 
