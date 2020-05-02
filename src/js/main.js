@@ -92,3 +92,25 @@ if (
   });
   observer.observe(document.querySelector("#pixel-anchor"));
 }
+
+//section experience - elements appear on scroll
+const sliders = document.querySelectorAll('.experience__content');
+
+const slideOptions = {
+  rootMargin: '-50px',
+};
+
+const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+  entries.forEach(entry => {
+    if(!entry.isIntersecting) {
+      return;
+    } else {
+      entry.target.firstElementChild.classList.add('appear');
+      appearOnScroll.unobserve(entry.target);
+    }
+  });
+}, slideOptions);
+
+sliders.forEach(slider => {
+  appearOnScroll.observe(slider);
+});

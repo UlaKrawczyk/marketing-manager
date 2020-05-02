@@ -1,6 +1,7 @@
 .experience {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  overflow: hidden;
 
   @media only screen and (max-width: $bp-medium-tablet) {
     grid-template-columns: 1fr;
@@ -80,5 +81,22 @@
       text-transform: uppercase;
       margin-bottom: 0.6rem;
     }
+  }
+
+  &__slide--left,
+  &__slide--right {
+    opacity: 0;
+    transition: opacity 400ms ease-in, transform 500ms ease-in;
+  }
+  &__slide--left {
+    transform: translateX(-70%);
+  }
+  &__slide--right {
+    transform: translateX(70%);
+  }
+  &__slide--left.appear,
+  &__slide--right.appear {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
