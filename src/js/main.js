@@ -83,7 +83,7 @@ if (
   "IntersectionObserverEntry" in window &&
   "intersectionRatio" in window.IntersectionObserverEntry.prototype
 ) {
-  let observer = new IntersectionObserver(entries => {
+  const observer = new IntersectionObserver(entries => {
     if (entries[0].boundingClientRect.y < 0) {
       slide.classList.add("slide-emerge");
     } else {
@@ -100,7 +100,8 @@ const slideOptions = {
   rootMargin: '-50px',
 };
 
-const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+const appearOnScroll = new IntersectionObserver
+(function(entries, appearOnScroll) {
   entries.forEach(entry => {
     if(!entry.isIntersecting) {
       return;
