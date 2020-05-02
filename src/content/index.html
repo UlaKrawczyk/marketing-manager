@@ -29,8 +29,11 @@
 
 <body class="grid-container">
 
-  <nav class="nav">
-    <button class="nav__hamburger btn-menu" aria-expanded="false">
+  <header class="header" id="head">
+  </header>
+
+  <nav class="nav" id="navi">
+    <button id='navi-button' class="nav__hamburger btn-menu" aria-expanded="false" role="button" tabindex="0">
       <span class="btn-menu__label">otwórz/zamknij menu</span>
       <span class="btn-menu__burger"></span>
     </button>
@@ -72,8 +75,6 @@
     </div>
   </nav>
 
-  <header class="header" id="head">
-  </header>
   <div class="header__background">
   </div>
   <div class="banner banner__container">
@@ -155,7 +156,6 @@
         sizes="(max-width: 1295px) 40vw, (max-width: 900px) 38vw, (max-width: 835px) 83vw, 525px"
         src="assets/img/about-2-small.jpg" alt="people working in a team" class="skills-container__photo">
     </div>
-
     <section class="skills-container__content">
       <h2 class="heading__secondary heading__secondary--right">moje
         umiejętności <span class="heading__secondary--span">.02</span></h2>
