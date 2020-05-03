@@ -1546,6 +1546,7 @@ template {
 .experience {
   display: -ms-grid;
   display: grid;
+  overflow: hidden;
   -ms-grid-columns: (1fr)[2];
   grid-template-columns: repeat(2, 1fr); }
   @media only screen and (max-width: 46.875em) {
@@ -1611,6 +1612,26 @@ template {
   .experience__text--uppercase {
     text-transform: uppercase;
     margin-bottom: 0.6rem; }
+  .experience__slide--left, .experience__slide--right {
+    opacity: 0;
+    -webkit-transition: opacity 400ms ease-in, -webkit-transform 500ms ease-in;
+    transition: opacity 400ms ease-in, -webkit-transform 500ms ease-in;
+    -o-transition: opacity 400ms ease-in, transform 500ms ease-in;
+    transition: opacity 400ms ease-in, transform 500ms ease-in;
+    transition: opacity 400ms ease-in, transform 500ms ease-in, -webkit-transform 500ms ease-in; }
+  .experience__slide--left {
+    -webkit-transform: translateX(-70%);
+        -ms-transform: translateX(-70%);
+            transform: translateX(-70%); }
+  .experience__slide--right {
+    -webkit-transform: translateX(70%);
+        -ms-transform: translateX(70%);
+            transform: translateX(70%); }
+  .experience__slide--left.appear, .experience__slide--right.appear {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+            transform: translateX(0); }
 
 .footer {
   display: -ms-grid;
@@ -2702,7 +2723,9 @@ template {
   -ms-grid-columns: (1fr)[3];
   grid-template-columns: repeat(3, 1fr);
   justify-items: center;
-  margin: 5rem 0; }
+  margin: 5rem 0;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden; }
   @media only screen and (max-width: 41.25em) {
     .slide {
       -ms-grid-columns: 1fr 58%;
