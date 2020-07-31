@@ -112,6 +112,7 @@ const appearOnScroll = new IntersectionObserver
   });
 }, slideOptions);
 
+
 sliders.forEach(slider => {
   appearOnScroll.observe(slider);
 });
