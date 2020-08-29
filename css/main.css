@@ -1703,21 +1703,30 @@ template {
     background-size: cover;
     background-position: center; }
     .hobbies__image--1 {
-      background-image: url(../assets/img/hobby-web-medium.jpg); }
+      background-image: url(../assets/img/hobby-web-small.jpg); }
+      @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-resolution: 192dpi), only screen and (min-width: 1400px) {
+        .hobbies__image--1 {
+          background-image: url(../assets/img/hobby-web-medium.jpg); } }
       @media only screen and (max-width: 52.2em) {
         .hobbies__image--1 {
           -ms-grid-row: 1;
           -ms-grid-row-span: 1;
           grid-row: 1/2; } }
     .hobbies__image--2 {
-      background-image: url(../assets/img/hobby-literature-medium.jpg); }
+      background-image: url(../assets/img/hobby-literature-small.jpg); }
+      @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-resolution: 192dpi), only screen and (min-width: 1400px) {
+        .hobbies__image--2 {
+          background-image: url(../assets/img/hobby-literature-medium.jpg); } }
       @media only screen and (max-width: 52.2em) {
         .hobbies__image--2 {
           -ms-grid-row: 3;
           -ms-grid-row-span: 1;
           grid-row: 3/4; } }
     .hobbies__image--3 {
-      background-image: url(../assets/img/hobby-foto-medium.jpg); }
+      background-image: url(../assets/img/hobby-foto-small.jpg); }
+      @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-resolution: 192dpi), only screen and (min-width: 1400px) {
+        .hobbies__image--3 {
+          background-image: url(../assets/img/hobby-foto-medium.jpg); } }
       @media only screen and (max-width: 52.2em) {
         .hobbies__image--3 {
           -ms-grid-row: 5;
@@ -2415,9 +2424,7 @@ template {
     grid-column: 2 / span 2;
     -ms-grid-row: 1;
     -ms-grid-row-span: 2;
-    grid-row: 1 / span 2;
-    -webkit-box-shadow: 0 0 1rem rgba(68, 70, 85, 0.25);
-            box-shadow: 0 0 1rem rgba(68, 70, 85, 0.25); }
+    grid-row: 1 / span 2; }
     @media only screen and (max-width: 41.25em) {
       .projects__gallery-item--2 {
         -ms-grid-column: 2;
@@ -2540,16 +2547,19 @@ template {
   .projects__gallery-item:hover .projects__gallery-hover {
     opacity: 1; }
 
-.projects__gallery-img {
+.projects__gallery-img,
+.projects__gallery-img img {
   width: 100%;
   height: 100%;
   display: block;
   -o-object-fit: cover;
      object-fit: cover; }
-  .projects__gallery-img--5 {
+  .projects__gallery-img--5,
+  .projects__gallery-img img--5 {
     -o-object-position: 0 10%;
        object-position: 0 10%; }
-  .projects__gallery-img--7 {
+  .projects__gallery-img--7,
+  .projects__gallery-img img--7 {
     -o-object-position: 80%;
        object-position: 80%; }
 
