@@ -1527,23 +1527,23 @@ template {
 
 .edu__img {
   justify-self: flex-end; }
-  .edu__img--ue {
+  .edu__img--ue img {
     width: 75%;
     margin-top: 5.5em; }
     @media only screen and (max-width: 30.94em) {
-      .edu__img--ue {
+      .edu__img--ue img {
         width: 60%; } }
-  .edu__img--agh {
+  .edu__img--agh img {
     width: 40%;
     margin-top: 1.5rem; }
     @media only screen and (max-width: 30.94em) {
-      .edu__img--agh {
+      .edu__img--agh img {
         width: 30%; } }
-  .edu__img--zsg {
+  .edu__img--zsg img {
     width: 50%;
     margin-top: 5.5rem; }
     @media only screen and (max-width: 30.94em) {
-      .edu__img--zsg {
+      .edu__img--zsg img {
         width: 35%; } }
 
 .experience {
@@ -2713,7 +2713,7 @@ template {
         grid-row: 2/ 3;
         padding: 2rem;
         height: 80%; } }
-  .skills-container__photo {
+  .skills-container__photo img {
     width: 100%;
     height: 100%;
     display: block;
