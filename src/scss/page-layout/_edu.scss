@@ -45,21 +45,21 @@
   &__img {
     justify-self: flex-end;
 
-    &--ue {
+    &--ue img {
       width: 75%;
       margin-top: 5.5em;
       @media only screen and (max-width: $bp-smallest) {
         width: 60%;
       }
     }
-    &--agh {
+    &--agh img {
       width: 40%;
       margin-top: 1.5rem;
       @media only screen and (max-width: $bp-smallest) {
         width: 30%;
       }
     }
-    &--zsg {
+    &--zsg img {
       width: 50%;
       margin-top: 5.5rem;
       @media only screen and (max-width: $bp-smallest) {

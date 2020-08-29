@@ -154,6 +154,11 @@
     filter: saturate(95%);
     padding: 3rem 3rem;
 
+    @media only screen and (min-resolution: 192dpi) and (min-width: $bp-medium-grid),
+      only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: $bp-medium-grid) {
+      background-image: url("../assets/img/ula-small.jpg");
+    }
+
     @media (orientation: portrait) and (max-width: $bp-medium-grid) {
       grid-column: 1 / -1;
       grid-row: 1 / 2;

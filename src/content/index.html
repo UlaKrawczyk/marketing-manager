@@ -36,12 +36,18 @@
     </button>
     <div class="nav__menu">
       <div class="nav__person">
-        <img src="assets/img/ula-tiny.jpg" alt="Ula Krawczyk photo" class="nav__person-photo">
         <div class="nav__person-content">
           <p class="nav__person-text">Urszula Krawczyk</p>
           <p class="nav__person-text nav__person-text--1">Marketing
             <span class="nav__person-text--blue">Project Manager</span></p>
         </div>
+
+        <picture class="nav__person-photo">
+          <source type="image/webp" srcset="assets/img/ula-tiny.webp">
+          <source type="image/jpeg" srcset="assets/img/ula-tiny.jpg">
+          <img src="assets/img/ula-tiny.jpg" alt="Ula Krawczyk photo">
+        </picture>
+
       </div>
       <ul class="nav__navigation navigation">
         <li class="navigation__item">
@@ -130,24 +136,18 @@
       <p class="text text__about">Jestem osobą uporządkowaną, systematyczną i zaangażowaną w to co robię. Bycie Project
         Managerem to dla mnie <span class="text__blue">stały rozwój siebie</span>, swoich umiejętności i zasobów
         wiedzy.</p>
-      <p>dodaję</p>
-
-      <picture class="" alt="Sylwia photo">
-
-        <source type="image/webp"
-          srcset="../assets/img/architect-small.webp 640w, ../assets/img/architect-tiny.webp 280w"
-          sizes="(min-width: 1280px) 110px, (min-width: 840px) 92px, (min-width: 500px) 50vw">
-        <source type="image/jpeg" srcset="../assets/img/architect-small.jpg 640w, ../assets/img/architect-tiny.jpg 280w"
-          sizes="(min-width: 1280px) 110px, (min-width: 840px) 92px, (min-width: 500px) 50vw">
-        <img src="../assets/img/architect-tiny.jpg" alt="Sylwia photo" class="">
-      </picture>
 
       <a href="assets/document/cv-ula-krawczyk.pdf" class="button-rectangle" download="cv-ula-krawczyk"><span class="span-bg"></span><span class="span-text">pobierz moje cv</span></a>
     </div>
     <div class="about-container__photo-wrapper">
-      <img src="assets/img/about-1-small.jpg" alt="picture of a laptop" class="about-container__photo"
-        srcset="assets/img/about-1-very_small.jpg 600w, assets/img/about-1-small.jpg 1200w, assets/img/about-1-medium.jpg 2000w"
-        sizes="(min-width: 1380px) 526px, (min-width: 840px) 38.65vw, (min-width: 500px) calc(100vw - 128px), calc(91.11vw - 53px)">
+
+      <picture class="about-container__photo" alt="photo of a laptop">
+        <source type="image/webp"
+          srcset="assets/img/about-1-very_small.webp 600w, assets/img/about-1-small.webp 1200w, assets/img/about-1-medium.webp 2000w"
+          sizes="(min-width: 1380px) 526px, (min-width: 840px) 38.65vw, calc(91.11vw - 53px)">
+        <source type="image/jpeg" srcset="assets/img/about-1-small.jpg">
+        <img src="assets/img/about-1-small.jpg" alt="picture of a laptop">
+      </picture>
     </div>
   </section>
 
@@ -157,9 +157,15 @@
   <section class="skills-container" id="skillId">
 
     <div class="skills-container__photo-wrapper">
-      <img src="assets/img/about-2-small.jpg" alt="people working in a team" class="skills-container__photo"
-        srcset="assets/img/about-2-very_small.jpg 600w, assets/img/about-2-small.jpg 1200w, assets/img/about-2-medium.jpg 2000w"
-        sizes="(min-width: 1380px) 526px, (min-width: 840px) 38.65vw, (min-width: 500px) calc(100vw - 128px), calc(91.11vw - 53px)">
+
+      <picture class="skills-container__photo" alt="people working in a team">
+        <source type="image/webp"
+          srcset="assets/img/about-2-very_small.webp 600w, assets/img/about-2-small.webp 1200w, assets/img/about-2-medium.webp 2000w"
+          sizes="(min-width: 1380px) 526px, (min-width: 840px) 38.65vw, calc(91.11vw - 53px)">
+        <source type="image/jpeg" srcset="assets/img/about-2-small.jpg">
+        <img src="assets/img/about-2-small.jpg" alt="people working in a team">
+      </picture>
+
     </div>
     <section class="skills-container__content">
       <h2 class="heading__secondary heading__secondary--right">moje
@@ -345,7 +351,11 @@
           <p class="text text__edu">studia podyplomowe</p>
           <p class="text">2005 - 2006</p>
         </section>
-        <img src="assets/icons/edu-ue-small.png" alt="logo Uniwersytetu Ekonomicznego" class="edu__img edu__img--ue">
+        <picture class="edu__img edu__img--ue" alt="logo Uniwersytetu Ekonomicznego">
+          <source type="image/webp" srcset="assets/icons/edu-ue-small.webp 1x, assets/icons/edu-ue-medium.webp 2x">
+          <source type="image/jpeg" srcset="assets/icons/edu-ue-small.jpg 1x, assets/icons/edu-ue-medium.jpg 2x">
+          <img src="assets/icons/edu-ue-small.jpg" alt="logo Uniwersytetu Ekonomicznego">
+        </picture>
       </div>
       <div class="edu__card">
         <section class="edu__card-content">
@@ -354,7 +364,11 @@
           <p class="text">1999 - 2004</p>
           <p class="text">Wydział Geologii, Geofizyki i Ochrony Środowiska</p>
         </section>
-        <img src="assets/icons/edu-agh-small.jpg" alt="logo Akademii Górniczo-Hutniczej" class="edu__img edu__img--agh">
+        <picture class="edu__img edu__img--agh" alt="logo Akademii Górniczo-Hutniczej">
+          <source type="image/webp" srcset="assets/icons/edu-agh-small.webp 1x, assets/icons/edu-agh.webp 2x">
+          <source type="image/jpeg" srcset="assets/icons/edu-agh-small.jpg 1x, assets/icons/edu-agh.jpg 2x">
+          <img src="assets/icons/edu-agh-small.jpg" alt="logo Akademii Górniczo-Hutniczej">
+        </picture>
       </div>
       <div class="edu__card">
         <section class="edu__card-content">
@@ -362,8 +376,11 @@
           <p class="text text__edu">5-cio letnie technikum</p>
           <p class="text">1994 - 1999</p>
         </section>
-        <img src="assets/icons/edu-zsg-small.jpg" alt="logo Zespołu Szkół Gastronomicznych"
-          class="edu__img edu__img--zsg">
+        <picture class="edu__img edu__img--zsg" alt="logo Zespołu Szkół Gastronomicznych">
+          <source type="image/webp" srcset="assets/icons/edu-zsg-small.webp 1x, assets/icons/edu-zsg.webp 2x">
+          <source type="image/jpeg" srcset="assets/icons/edu-zsg-small.jpg 1x, assets/icons/edu-zsg.jpg 2x">
+          <img src="assets/icons/edu-zsg-small.jpg" alt="logo Zespołu Szkół Gastronomicznych">
+        </picture>
       </div>
     </div>
   </section>
