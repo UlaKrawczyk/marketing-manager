@@ -38,7 +38,13 @@
     background-position: center;
 
     &--1 {
-      background-image: url(../assets/img/hobby-web-medium.jpg);
+      background-image: url(../assets/img/hobby-web-small.jpg);
+
+      @media only screen and (min-resolution: 192dpi),
+        only screen and (-webkit-min-device-pixel-ratio: 2),
+        only screen and (min-width: 1400px) {
+        background-image: url(../assets/img/hobby-web-medium.jpg);
+      }
 
       @media only screen and (max-width: $bp-medium-grid) {
         grid-row: 1/2;
@@ -46,14 +52,25 @@
     }
 
     &--2 {
-      background-image: url(../assets/img/hobby-literature-medium.jpg);
+      background-image: url(../assets/img/hobby-literature-small.jpg);
 
+      @media only screen and (min-resolution: 192dpi),
+        only screen and (-webkit-min-device-pixel-ratio: 2),
+        only screen and (min-width: 1400px) {
+        background-image: url(../assets/img/hobby-literature-medium.jpg);
+      }
       @media only screen and (max-width: $bp-medium-grid) {
         grid-row: 3/4;
       }
     }
     &--3 {
-      background-image: url(../assets/img/hobby-foto-medium.jpg);
+      background-image: url(../assets/img/hobby-foto-small.jpg);
+
+      @media only screen and (min-resolution: 192dpi),
+        only screen and (-webkit-min-device-pixel-ratio: 2),
+        only screen and (min-width: 1400px) {
+        background-image: url(../assets/img/hobby-foto-medium.jpg);
+      }
 
       @media only screen and (max-width: $bp-medium-grid) {
         grid-row: 5/6;
