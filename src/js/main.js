@@ -21,7 +21,7 @@ window.onload = function () {
 };
 window.onresize = function () {
   setNavWidth();
-}
+};
 
 //navigation revealing or hiding depanding on scroll direction
 window.addEventListener("scroll", () => {
@@ -34,7 +34,10 @@ window.addEventListener("scroll", () => {
     //down
     body.classList.remove(scrollUp);
     body.classList.add(scrollDown);
-  } else if (currentScroll < lastScroll && body.classList.contains(scrollDown)) {
+  } else if (
+    currentScroll < lastScroll &&
+    body.classList.contains(scrollDown)
+  ) {
     //up
     body.classList.remove(scrollDown);
     body.classList.add(scrollUp);
@@ -44,7 +47,7 @@ window.addEventListener("scroll", () => {
 
 //look of hamburger menu after slightly scrolling down
 function changeHamburger() {
-  const mq835 = window.matchMedia('(max-width: 835px)');
+  const mq835 = window.matchMedia("(max-width: 835px)");
   const scrolledDown = window.pageYOffset;
 
   if (mq835.matches && scrolledDown > 40) {
@@ -58,20 +61,20 @@ function changeHamburger() {
 window.addEventListener("scroll", changeHamburger);
 
 //navigation - hamburger menu changes on cross and menu appears
-navHamburger.addEventListener('click', function () {
-  const isOpened = navHamburger.getAttribute('aria-expanded') === 'true';
+navHamburger.addEventListener("click", function () {
+  const isOpened = navHamburger.getAttribute("aria-expanded") === "true";
 
-  navHamburger.classList.toggle('btn-menu_open', !isOpened);
-  navHamburger.setAttribute('aria-expanded', String(!isOpened));
-  navMenu.classList.toggle('nav__menu_open', !isOpened);
+  navHamburger.classList.toggle("btn-menu_open", !isOpened);
+  navHamburger.setAttribute("aria-expanded", String(!isOpened));
+  navMenu.classList.toggle("nav__menu_open", !isOpened);
 });
 
 //menu closes after clicking one of the links
 for (let i = 0; i < navLinks.length; i++) {
-  navLinks[i].addEventListener('click', function () {
-    navMenu.classList.toggle('nav__menu_open');
-    navHamburger.classList.toggle('btn-menu_open');
-    navHamburger.setAttribute('aria-expanded', 'false');
+  navLinks[i].addEventListener("click", function () {
+    navMenu.classList.toggle("nav__menu_open");
+    navHamburger.classList.toggle("btn-menu_open");
+    navHamburger.setAttribute("aria-expanded", "false");
   });
 }
 
@@ -83,7 +86,7 @@ if (
   "IntersectionObserverEntry" in window &&
   "intersectionRatio" in window.IntersectionObserverEntry.prototype
 ) {
-  const observer = new IntersectionObserver(entries => {
+  const observer = new IntersectionObserver((entries) => {
     if (entries[0].boundingClientRect.y < 0) {
       slide.classList.add("slide-emerge");
     } else {
@@ -94,25 +97,82 @@ if (
 }
 
 //section experience - elements appear on scroll
-const sliders = document.querySelectorAll('.experience__content');
+const sliders = document.querySelectorAll(".experience__content");
 
 const slideOptions = {
-  rootMargin: '-50px',
+  rootMargin: "-50px",
 };
 
-const appearOnScroll = new IntersectionObserver
-(function(entries, appearOnScroll) {
-  entries.forEach(entry => {
-    if(!entry.isIntersecting) {
+const appearOnScroll = new IntersectionObserver(function (
+  entries,
+  appearOnScroll
+) {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) {
       return;
     } else {
-      entry.target.firstElementChild.classList.add('appear');
+      entry.target.firstElementChild.classList.add("appear");
       appearOnScroll.unobserve(entry.target);
     }
   });
-}, slideOptions);
+},
+slideOptions);
 
-
-sliders.forEach(slider => {
+sliders.forEach((slider) => {
   appearOnScroll.observe(slider);
 });
+
+//gallery
+
+function Gallery(gallery) {
+  if (!gallery) {
+    throw new Error("no gallery found!");
+  }
+
+  const images = Array.from(gallery.querySelectorAll("img"));
+  const modal = document.querySelector(".modal");
+  const prevButton = document.querySelector(".prev");
+  const nextButton = document.querySelector(".next");
+  let currentImage;
+
+  function openModal() {
+    console.info("opening modal");
+    if (modal.matches(".open")) {
+      console.info("modal open");
+      return;
+    }
+    modal.classList.add("open");
+  }
+
+  function closeModal() {
+    modal.classList.remove("open");
+  }
+
+  function handleClickOutside(e) {
+    if (e.target === e.currentTarget) {
+      //if the thing that we clicked is the same that we are actually listening for = outside (not anything inside it)
+      closeModal();
+    }
+  }
+
+  function showImage(el) {
+    if (!el) {
+      console.info("no image to show");
+      return;
+    }
+    //update modal with info
+    modal.querySelector("img").src = el.src;
+    modal.querySelector("h4").textContent = el.title;
+    modal.querySelector("figure p").textContent = el.dataset.description;
+    currentImage = el;
+    openModal();
+  }
+
+  images.forEach((image) =>
+    image.addEventListener("click", (e) => showImage(e.currentTarget))
+  );
+
+  modal.addEventListener("click", handleClickOutside);
+}
+
+const gallery1 = Gallery(document.querySelector(".gallery-1"));
