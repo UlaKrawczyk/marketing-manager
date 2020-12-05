@@ -124,14 +124,9 @@
         grid-row: 7 / 8;
       }
     }
-
-    &:hover .projects__gallery-hover {
-      opacity: 1;
-    }
   }
 
-  &__gallery-img,
-  &__gallery-img img {
+  &__gallery-img {
     width: 100%;
     height: 100%;
     display: block;
@@ -184,23 +179,6 @@
       flex-wrap: wrap;
       text-align: center;
       align-items: flex-end;
-    }
-  }
-
-  &__gallery-plus {
-    display: block;
-    margin-top: 1rem;
-    width: 3rem;
-    font-size: 2.5rem;
-    line-height: 1;
-    text-align: center;
-    border: var(--line);
-    cursor: pointer;
-  }
-
-  &__gallery-text {
-    @media only screen and (hover: none) and (max-width: 1280px) {
-      margin-right: 1rem;
     }
   }
 }
