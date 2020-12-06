@@ -840,6 +840,17 @@ template {
   -o-transition: 0.3s;
   transition: 0.3s; }
 
+.form input:-moz-placeholder-shown + label {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-5px); }
+
+.form input:-ms-input-placeholder + label {
+  opacity: 0;
+  visibility: hidden;
+  -ms-transform: translateY(-5px);
+      transform: translateY(-5px); }
+
 .form input:placeholder-shown + label {
   opacity: 0;
   visibility: hidden;
@@ -1902,7 +1913,6 @@ template {
   -ms-grid-row-span: 1;
   grid-row: 6 / 7;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(90, 88, 85, 0.45)), to(rgba(255, 255, 255, 0.35))), url(../assets/img/about-3-small.jpg);
-  background-image: -webkit-linear-gradient(top, rgba(90, 88, 85, 0.45), rgba(255, 255, 255, 0.35)), url(../assets/img/about-3-small.jpg);
   background-image: -o-linear-gradient(top, rgba(90, 88, 85, 0.45), rgba(255, 255, 255, 0.35)), url(../assets/img/about-3-small.jpg);
   background-image: linear-gradient(to bottom, rgba(90, 88, 85, 0.45), rgba(255, 255, 255, 0.35)), url(../assets/img/about-3-small.jpg);
   background-attachment: fixed;
@@ -1916,7 +1926,6 @@ template {
   @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 600px), only screen and (-o-min-device-pixel-ratio: 2/1) and (min-width: 600px), only screen and (min-resolution: 192dpi) and (min-width: 600px), only screen and (min-width: 1200px) {
     .skills-slide-background {
       background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(90, 88, 85, 0.45)), to(rgba(255, 255, 255, 0.35))), url(../assets/img/about-3-medium.jpg);
-      background-image: -webkit-linear-gradient(top, rgba(90, 88, 85, 0.45), rgba(255, 255, 255, 0.35)), url(../assets/img/about-3-medium.jpg);
       background-image: -o-linear-gradient(top, rgba(90, 88, 85, 0.45), rgba(255, 255, 255, 0.35)), url(../assets/img/about-3-medium.jpg);
       background-image: linear-gradient(to bottom, rgba(90, 88, 85, 0.45), rgba(255, 255, 255, 0.35)), url(../assets/img/about-3-medium.jpg); } }
   .skills-slide-background--hobbies {
@@ -1924,7 +1933,6 @@ template {
     -ms-grid-row-span: 1;
     grid-row: 11 / 12;
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(90, 88, 85, 0.45)), to(rgba(255, 255, 255, 0.35))), url(../assets/img/hobby-scroll-small.jpg);
-    background-image: -webkit-linear-gradient(top, rgba(90, 88, 85, 0.45), rgba(255, 255, 255, 0.35)), url(../assets/img/hobby-scroll-small.jpg);
     background-image: -o-linear-gradient(top, rgba(90, 88, 85, 0.45), rgba(255, 255, 255, 0.35)), url(../assets/img/hobby-scroll-small.jpg);
     background-image: linear-gradient(to bottom, rgba(90, 88, 85, 0.45), rgba(255, 255, 255, 0.35)), url(../assets/img/hobby-scroll-small.jpg);
     -webkit-filter: blur(1.5px) sepia(35%) brightness(0.7);
@@ -1932,13 +1940,11 @@ template {
     @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 600px), only screen and (-o-min-device-pixel-ratio: 2/1) and (min-width: 600px), only screen and (min-resolution: 192dpi) and (min-width: 600px), only screen and (min-width: 1200px) {
       .skills-slide-background--hobbies {
         background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(90, 88, 85, 0.45)), to(rgba(255, 255, 255, 0.35))), url(../assets/img/hobby-scroll-medium.jpg);
-        background-image: -webkit-linear-gradient(top, rgba(90, 88, 85, 0.45), rgba(255, 255, 255, 0.35)), url(../assets/img/hobby-scroll-medium.jpg);
         background-image: -o-linear-gradient(top, rgba(90, 88, 85, 0.45), rgba(255, 255, 255, 0.35)), url(../assets/img/hobby-scroll-medium.jpg);
         background-image: linear-gradient(to bottom, rgba(90, 88, 85, 0.45), rgba(255, 255, 255, 0.35)), url(../assets/img/hobby-scroll-medium.jpg); } }
     @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1000px), only screen and (-o-min-device-pixel-ratio: 2/1) and (min-width: 1000px), only screen and (min-resolution: 192dpi) and (min-width: 1000px), only screen and (min-width: 2000px) {
       .skills-slide-background--hobbies {
         background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(90, 88, 85, 0.45)), to(rgba(255, 255, 255, 0.35))), url(../assets/img/hobby-scroll-big.jpg);
-        background-image: -webkit-linear-gradient(top, rgba(90, 88, 85, 0.45), rgba(255, 255, 255, 0.35)), url(../assets/img/hobby-scroll-big.jpg);
         background-image: -o-linear-gradient(top, rgba(90, 88, 85, 0.45), rgba(255, 255, 255, 0.35)), url(../assets/img/hobby-scroll-big.jpg);
         background-image: linear-gradient(to bottom, rgba(90, 88, 85, 0.45), rgba(255, 255, 255, 0.35)), url(../assets/img/hobby-scroll-big.jpg); } }
 
