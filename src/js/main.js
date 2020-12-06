@@ -122,13 +122,11 @@ sliders.forEach((slider) => {
   appearOnScroll.observe(slider);
 });
 
-//gallery
-
+//gallery - we can use it many times on a page
 function Gallery(gallery) {
   if (!gallery) {
     throw new Error("no gallery found!");
   }
-
   const images = Array.from(gallery.querySelectorAll("img"));
   const modal = document.querySelector(".modal");
   const prevButton = document.querySelector(".prev");
@@ -142,10 +140,18 @@ function Gallery(gallery) {
       return;
     }
     modal.classList.add("open");
+    //event listeners to be bound when we open the modal:
+    window.addEventListener("keyup", handleKeyUp);
+    nextButton.addEventListener("click", showNextImage);
+    prevButton.addEventListener("click", showPrevImage);
   }
 
   function closeModal() {
     modal.classList.remove("open");
+    //event listeners to be removed when we close the modal:
+    window.removeEventListener("keyup", handleKeyUp);
+    nextButton.removeEventListener("click", showNextImage);
+    prevButton.removeEventListener("click", showPrevImage);
   }
 
   function handleClickOutside(e) {
@@ -153,6 +159,21 @@ function Gallery(gallery) {
       //if the thing that we clicked is the same that we are actually listening for = outside (not anything inside it)
       closeModal();
     }
+  }
+
+  function handleKeyUp(e) {
+    if (e.key === "Escape") return closeModal(); //one liner
+    if (e.key === "ArrowRight") return showNextImage();
+    if (e.key === "ArrowLeft") return showPrevImage();
+    //return - if sb clicks escape we dont need to check arrows...
+  }
+
+  function showNextImage() {
+    showImage(currentImage.nextElementSibling || gallery.firstElementChild);
+  }
+
+  function showPrevImage() {
+    showImage(currentImage.previousElementSibling || gallery.lastElementChild);
   }
 
   function showImage(el) {
@@ -172,7 +193,16 @@ function Gallery(gallery) {
     image.addEventListener("click", (e) => showImage(e.currentTarget))
   );
 
+  images.forEach((image) => {
+    image.addEventListener("keyup", (e) => {
+      if (e.key === "Enter") {
+        showNextImage(e.currentTarget);
+      }
+    });
+  });
+
   modal.addEventListener("click", handleClickOutside);
 }
 
+//pobieramy konkretną galerię i dla niej odpalamy funkcję Gallery!
 const gallery1 = Gallery(document.querySelector(".gallery-1"));
