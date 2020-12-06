@@ -131,6 +131,7 @@ function Gallery(gallery) {
   const modal = document.querySelector(".modal");
   const prevButton = document.querySelector(".prev");
   const nextButton = document.querySelector(".next");
+  const closeButton = document.querySelector(".closeButton");
   let currentImage;
 
   function openModal() {
@@ -144,6 +145,7 @@ function Gallery(gallery) {
     window.addEventListener("keyup", handleKeyUp);
     nextButton.addEventListener("click", showNextImage);
     prevButton.addEventListener("click", showPrevImage);
+    closeButton.addEventListener("click", closeModal);
   }
 
   function closeModal() {
@@ -152,6 +154,7 @@ function Gallery(gallery) {
     window.removeEventListener("keyup", handleKeyUp);
     nextButton.removeEventListener("click", showNextImage);
     prevButton.removeEventListener("click", showPrevImage);
+    closeButton.removeEventListener("click", closeModal);
   }
 
   function handleClickOutside(e) {
